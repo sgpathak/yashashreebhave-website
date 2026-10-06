@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Celebrity Testimonials &amp; Google Reviews | Yashashree Bhave</title>
+  <meta name="description" content="Read authentic testimonials from Bollywood icons Sonu Nigam, Bappi Lahiri, Anandji Virji Shah, Farah Khan, Raza Murad, and verified 4.8-star Google reviews for Yashashree Bhave.">
+  <meta name="keywords" content="Yashashree Bhave testimonials, Sonu Nigam review, Bappi Lahiri praise, Anandji Virji Shah, Farah Khan singer, Google reviews YB Musical Events">
+  <link rel="canonical" href="https://yashashreebhave.com/testimonial.html">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Schema.org Review & Endorsement Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "MusicArtist",
+      "name": "Yashashree Bhave",
+      "alternateName": "Yashi",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "20"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Sonu Nigam" },
+          "reviewBody": "Lauded her as one of the most versatile vocalists emerging from Nagpur, noting her live performance sounded as flawless as a studio-recorded CD."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Bappi Lahiri" },
+          "reviewBody": "Commended her absolute mastery over rhythm, tempo, and pitch-perfect delivery, calling her performance 100% complete."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Anandji Virji Shah" },
+          "reviewBody": "Hailed her as a true playback singer with vocal stability, emotional depth, and effortless high register."
+        }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* --- Fix: Spacing between Review Buttons --- */
+    .g-review-action-row {
+      display: flex;
+      align-items: center;
+      gap: 16px !important;
+      flex-wrap: wrap;
+    }
+
+    .btn-write-review {
+      background: var(--accent-gold-gradient);
+      color: #07080b;
+      font-weight: 700;
+      padding: 10px 22px !important;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      white-space: nowrap;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+      transition: all 0.25s ease;
+    }
+
+    .btn-write-review:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.1);
+      color: #000;
+    }
+
+    /* --- Fix: Side-by-Side Celebrity Testimonial Cards (Uncropped Images) --- */
+    .testimonial-card-featured {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 320px 1fr !important;
+      margin-bottom: 28px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .testimonial-card-featured:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-glow);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.12);
+    }
+
+    .testimonial-media {
+      background: #020305;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 16px;
+    }
+
+    .testimonial-media img {
+      width: 100%;
+      height: auto;
+      max-height: 380px;
+      object-fit: contain !important;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .testimonial-content {
+      padding: 30px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* --- Fix: Audience Reviews Grid Layout --- */
+    .reviews-masonry-grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+      gap: 24px !important;
+      margin-top: 28px !important;
+      align-items: stretch;
+    }
+
+    .audience-review-card {
+      background: rgba(14, 18, 25, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 24px 22px !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      height: 100%;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      overflow: hidden;
+    }
+
+    .audience-review-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(212, 175, 55, 0.4);
+    }
+
+    /* --- Fix: Restrict Screenshot Image Container inside Card --- */
+    .review-screenshot-box {
+      width: 100%;
+      max-height: 150px;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .review-screenshot-box img {
+      width: 100%;
+      height: auto;
+      max-height: 150px;
+      object-fit: contain;
+      display: block;
+    }
+
+    @media (max-width: 820px) {
+      .testimonial-card-featured {
+        grid-template-columns: 1fr !important;
+      }
+      .testimonial-media {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-strip" aria-label="Key Honors">
+    Indian Idol Season 2 Finalist &bull; Sa Re Ga Ma Pa Final Runner-up &bull; Over 3,500+ Live Stage Shows
+  </aside>
+
+  <!-- Sticky Header -->
+  <header>
+    <div class="nav-bar">
+      <a href="index.html" class="brand-wrapper">
+        <img src="images/logo.png" alt="Yashashree Bhave Logo" class="brand-logo" onerror="this.style.display='none'">
+        <span class="brand-text">YASHASHREE BHAVE</span>
+      </a>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav aria-label="Primary Navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        
+        <!-- About & Journey Dropdown (Non-Link Parent) -->
+        <li class="nav-item-dropdown" id="dropdownAbout">
+          <span class="dropdown-trigger" onclick="toggleMobileDropdown(this)">
+            About &amp; Journey <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+          </span>
+          <ul class="dropdown-menu">
+            <li><a href="about-yashashree-bhave.html">About Yashashree Bhave</a></li>
+            <li><a href="indian-idol-2-journey.html">Indian Idol 2 Journey</a></li>
+            <li><a href="biography-musical-journey.html">Musical Biography</a></li>
+            <li><a href="awards-television-achievements.html">Awards &amp; Television</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-dropdown" id="dropdownMedia">
+          <span class="dropdown-trigger" onclick="toggleMobileDropdown(this)">
+            Music &amp; Media <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+          </span>
+          <ul class="dropdown-menu">
+            <li><a href="discography-videos.html">Discography &amp; Videos</a></li>
+            <li><a href="download-mp3-songs.html">Download MP3 Songs</a></li>
+            <li><a href="live-shows-concert-booking.html">Live Shows Gallery</a></li>
+            <li><a href="paper-media.html">Press &amp; Paper Media</a></li>
+            <li><a href="bollywood-legends.html">Bollywood Legends</a></li>
+          </ul>
+        </li>
+
+        <li><a href="photos.html">Photo Gallery</a></li>
+        <li><a href="singing-classes.html">Singing Classes</a></li>
+        <li><a href="testimonial.html">Reviews</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+
+      <!-- Hero Header Section -->
+      <section class="media-kit-header" style="text-align: center;">
+        <div class="stage-pill" style="display: inline-flex; margin: 0 auto 16px;">Industry Endorsements</div>
+        <h1 class="section-title">CELEBRITY TESTIMONIALS &amp; GOOGLE REVIEWS</h1>
+        <p class="section-subtitle" style="margin: 0 auto 32px;">
+          Endorsements from Bollywood's iconic music directors, playback pioneers, film thespians, and live audience members.
+        </p>
+
+        <div class="guidelines-grid" style="max-width: 960px; margin: 0 auto;">
+          <div class="guideline-item">
+            <strong>Music Maestros</strong>
+            <span>Commended by Sonu Nigam, Bappi Lahiri, and Anandji Virji Shah for sur, laya, and pitch clarity.</span>
+          </div>
+          <div class="guideline-item">
+            <strong>Film Directors &amp; Actors</strong>
+            <span>Lauded by Farah Khan, Raza Murad, Ashok Saraf, Vikram Gokhale, and the late Om Puri.</span>
+          </div>
+          <div class="guideline-item">
+            <strong>4.8★ Verified Google Rating</strong>
+            <span>Authentic public feedback from concert organizers, music patrons, and students.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Real Dynamic Google Reviews Strip -->
+      <div class="reviews-strip">
+        <div class="reviews-meta-group">
+          <svg class="g-badge-icon" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          <div>
+            <div class="rating-row">
+              <strong class="rating-score">4.8</strong>
+              <span class="rating-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </span>
+              <span class="rating-count">(20 Verified Reviews)</span>
+            </div>
+            <div class="business-brand">Y.B Musical Events &amp; Orchestra</div>
+          </div>
+        </div>
+
+        <div class="g-review-action-row">
+          <a href="https://maps.google.com/maps?cid=10801988621236739829" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-maps-link">
+           Read All on Maps
+          </a>
+          <a href="https://search.google.com/local/writereview?placeid=ChIJk5V7c7TB1zsR9c2B66pCjJY" target="_blank" rel="noopener noreferrer" class="btn-write-review">
+            <i class="fa-solid fa-pen-to-square"></i> Leave a Review
+          </a>
+        </div>
+      </div>
+
+      <!-- Section 1: Bollywood Legends Endorsements -->
+      <section class="testimonials-section">
+        
+        <!-- Sonu Nigam -->
+        <article class="testimonial-card-featured">
+          <div class="testimonial-media">
+            <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tuUa9_443p6dvDWVQCTqMyCiSiEA6-X56qr8NPJA2jwo99lTUN5ADtYMUF3jxR_rwRrgS88h0fppOgfAUo4wB8HiSYcPUmRktfYFECNPZuXnsvDQ_SRWmrC3lzKsdQN_fOPNb9lYEZsCygf_LPezxgYAFBzZ5kHz3HzUjoKaRqIFX5Rfkbxv4HQ4qCP_yhpGKgpbr5p7JR7v3X7Zc5DUoL8Bzjun9tkdt81RzC4ro=w1280" alt="Sonu Nigam endorsing Yashashree Bhave" loading="lazy">
+          </div>
+          <div class="testimonial-content">
+            <h2 class="testimonial-speaker"><i class="fa-solid fa-microphone-lines"></i> Sonu Nigam</h2>
+            <p class="testimonial-quote">
+              "Legendary playback singer Sonu Nigam lauded musical artist Yashashree Bhave, hailing her as one of the most versatile vocalists emerging from Nagpur. Mesmerized by the pitch-perfect precision of her live performance—noting it sounded as flawless as a studio-recorded CD—Nigam expressed strong endorsement for her future in Bollywood playback singing."
+            </p>
+            <div class="testimonial-author-tag">&mdash; Sonu Nigam, Bollywood Playback Singer &amp; Music Icon</div>
+          </div>
+        </article>
+
+        <!-- Bappi Lahiri -->
+        <article class="testimonial-card-featured">
+          <div class="testimonial-media">
+            <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72sqXp-htXUqOjn2AetapF5TKhlTVwLDJZ-ROWfhScyHpibUBv0jxAh-cDMZwu6ld7kRYe2igngg0Jz2RIoikw_qrq_Fl4EzAgre9QecwOYzAvsz5NGtHJqQBtpLsDtW7Z_O3OFn0QauRkseCQX2xp9jqRL1u6raTZN4PcuIKh_QxsWKkcJtOsYe7IDhHS0ugYMOc2ppSlRD-XnqEaeovzX7EsVefYrdqG-SOctLcsE=w1280" alt="Bappi Lahiri praising Yashashree Bhave" loading="lazy">
+          </div>
+          <div class="testimonial-content">
+            <h2 class="testimonial-speaker"><i class="fa-solid fa-record-vinyl"></i> Bappi Lahiri</h2>
+            <p class="testimonial-quote">
+              "Legendary Bollywood composer and playback icon Bappi Lahiri publicly lauded singer Yashashree Bhave, spotlighting her exceptional musicality during a live performance. Praising her vocal texture, Lahiri commended Bhave for her absolute mastery over rhythm (sur), tempo (laya), and pitch-perfect delivery, calling her performance 100% complete."
+            </p>
+            <div class="testimonial-author-tag">&mdash; Bappi Lahiri, Music Director &amp; Playback Pioneer</div>
+          </div>
+        </article>
+
+        <!-- Anandji Virji Shah -->
+        <article class="testimonial-card-featured">
+          <div class="testimonial-media">
+            <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72viffCTMgGHqXQgY34eW71ey_5RROpUO6r5idgnzfGVr-44D-Cop4150hu6jh_8itDMQM9HqqY5bV2JVl6T-hE6h16qM0n4qb_UVIh5bxj_cew9NEPiG5PPjwzCIpPHFCaXM3PNhAhrYJuUcoRFepJoNBvOGPcYtIJ9WAEhHb2aVwMnjRDBIH2dKZ1v3ro-PvZVSvKH8V5K_0Uli0Zk-Lmm0KpS5BBqvGP32Xaz5Cg=w1280" alt="Anandji Virji Shah with Yashashree Bhave" loading="lazy">
+          </div>
+          <div class="testimonial-content">
+            <h2 class="testimonial-speaker"><i class="fa-solid fa-award"></i> Anandji Virji Shah (Kalyanji&ndash;Anandji)</h2>
+            <p class="testimonial-quote">
+              "Legendary Bollywood composer Anandji Virji Shah hailed Yashashree Bhave as a 'true playback singer.' Commending her vocal stability, emotional depth, and effortless high register, the veteran music director emphasized that her refined voice and polished tonal quality make her exceptionally suited for mainstream cinema playback."
+            </p>
+            <div class="testimonial-author-tag">&mdash; Anandji Virji Shah, Legendary Music Composer &amp; Director</div>
+          </div>
+        </article>
+
+        <!-- Farah Khan -->
+        <article class="testimonial-card-featured">
+          <div class="testimonial-media">
+            <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72tYEStkS9CcvkUSDesCTB-UqXbuVYSzWEpSwmYbZzV6aikUm15rCfEOfnNQ7lGQa7ZVtSFqrEXSv9TLUoebJ_Nu0j5ygk9xgwL0XTHneoUliGDQahdHhVOnxa04lgMlciASQ_H5Vhy8hmU1M14TBN6OMZ-nIvu6ck_yNyVE55IU5kPs8sAcNh4i2JgmgJriUoxHe0-Pw-P7R_wcg28_E0uO0kORgx6FU6wMQHLhIX0=w1280" alt="Farah Khan with Yashashree Bhave" loading="lazy">
+          </div>
+          <div class="testimonial-content">
+            <h2 class="testimonial-speaker"><i class="fa-solid fa-video"></i> Farah Khan</h2>
+            <p class="testimonial-quote">
+              "Acclaimed Bollywood filmmaker and choreographer Farah Khan expressed high praise for Yashashree Bhave, complimenting both her striking screen presence and melodic vocal tone. Highlighting her sweet, expressive voice as an ideal fit for Hindi cinema, Farah Khan noted that Yashashree carries the rare blend of musical skill and charismatic star appeal."
+            </p>
+            <div class="testimonial-author-tag">&mdash; Farah Khan, Film Director &amp; Choreographer</div>
+          </div>
+        </article>
+
+        <!-- Raza Murad -->
+        <article class="testimonial-card-featured">
+          <div class="testimonial-media">
+            <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vLa2T0XpbImFyDfaydnySnbcrOrb-vBzyaG9sNZtHgw8Y4pi2zkmP7eCxSY-3ysnr0UFu_cWedl62dfGhSOQXtP5AzMasaKcTbUFfCFA4fEd4v3K4fpung4DquZ6aD5hk88N8dDpSS1gdtc-lEwXotBP1pMqiySAH4-cghv98r0VDRO0WmD_JhACLEnQelbCmAaA0nhZhcnfiGzOO58505w__qRHTxemBFDOTUc8A=w1280" alt="Raza Murad with Yashashree Bhave" loading="lazy">
+          </div>
+          <div class="testimonial-content">
+            <h2 class="testimonial-speaker"><i class="fa-solid fa-masks-theater"></i> Raza Murad</h2>
+            <p class="testimonial-quote">
+              "Veteran Bollywood actor Raza Murad praised playback singer Yashashree Bhave, drawing comparisons between her vocal mastery and music legend Asha Bhosle. Applauding her performance of the classic song 'Aye Dil-E-Nadaan', Murad commended her vocal control, tone, and emotive delivery."
+            </p>
+            <div class="testimonial-author-tag">&mdash; Raza Murad, Bollywood Actor</div>
+          </div>
+        </article>
+
+        <!-- Ashok Saraf -->
+        <article class="testimonial-card-featured">
+          <div class="testimonial-media">
+            <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vvWzinVONLNoOocqA8LeZVlyos-uUnGgbfMkiA1looEKF16gvFAvS1aYR7P8LwA1CaLU6oXoIg2SCijnK01c-ei0ZSbwarYs8KLESGzV_fvHbZFR19ZhPT625i79n4DmJUJALo-e0mysnCOFMolnm29bXeO6MTvjMDOm3c_w7acYL1INWcwFx9QoR4UPSE5b2-qXd9pfYEZA-b038Db9rBugDYzaPZzM0wYM79dOY=w1280" alt="Ashok Saraf with Yashashree Bhave" loading="lazy">
+          </div>
+          <div class="testimonial-content">
+            <h2 class="testimonial-speaker"><i class="fa-solid fa-theater-masks"></i> Ashok Saraf</h2>
+            <p class="testimonial-quote">
+              "Legendary theater and cinema icon Ashok Saraf praised Yashashree Bhave during the staging of his celebrated Marathi play in Nagpur. Deeply impressed by both her dynamic cultural initiatives and her soulful singing, Saraf commended Yashashree's dedication to the arts, applauding her exceptional vocal talent."
+            </p>
+            <div class="testimonial-author-tag">&mdash; Ashok Saraf, Legendary Film &amp; Theater Actor</div>
+          </div>
+        </article>
+
+        <!-- Vikram Gokhale -->
+        <article class="testimonial-card-featured">
+          <div class="testimonial-media">
+            <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72uurpw-rl_ytWQ114G-EEUhKBp_8q0IJfvrHekEpIP-sNM7UdgupRLhzwnv0QGZrymVAQqOWaHIRdieNPGS0IwFw57syxYdJZCdQhN6OQlYyPv-OgQuoNsEFsJqyAmU5vHxeoaVj-VNiT-mpX6OsW2mXIG-AQf4ckvgrj1m51h4jnOAi-xvlt04Zx24xStyThfIot2XKxNFr4JUNWjLcrgmN-W7EwX9cc199tS1=w1280" alt="Vikram Gokhale with Yashashree Bhave" loading="lazy">
+          </div>
+          <div class="testimonial-content">
+            <h2 class="testimonial-speaker"><i class="fa-solid fa-film"></i> Vikram Gokhale</h2>
+            <p class="testimonial-quote">
+              "Revered Indian film and theater thespian Vikram Gokhale commended Yashashree Bhave for her remarkable artistic dedication, expressive vocal range, and musical maturity. Acknowledging her deep grounding in melody (sur) and emotional storytelling, Gokhale praised her as a gifted vocalist capable of leaving a lasting impression in Indian cinema."
+            </p>
+            <div class="testimonial-author-tag">&mdash; Vikram Gokhale, National Award-Winning Actor &amp; Director</div>
+          </div>
+        </article>
+
+        <!-- Om Puri -->
+        <article class="testimonial-card-featured">
+          <div class="testimonial-media">
+            <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72s4WI6TebO5pNH1s1DY0i92ynPTvrWuVX-RUYAQXgeBjGUTcng7WgTpL5gNrP26NmPbT_0QQRZHk6cJvIL2N7EnD1Z-CNf5XQIov-8xKhMwUYwluIgEQJ2J7l8p0aiYM9ZwojjJl8HZfLa3G3vWSosZNG9qirKcJSqrVY6FUhq64HPNGRMx-AGsAX1TrRM4WI1aPQS8RvzuRPe3XjN-Wj7snRXAmEMaTECDfwImttQ=w1280" alt="Om Puri with Yashashree Bhave" loading="lazy">
+          </div>
+          <div class="testimonial-content">
+            <h2 class="testimonial-speaker"><i class="fa-solid fa-clapperboard"></i> Late Om Puri Sahab</h2>
+            <p class="testimonial-quote">
+              "In an appreciative interaction, internationally acclaimed cinematic legend Om Puri praised Yashashree Bhave for her natural vocal clarity, warmth, and depth. Highlighting her grounded artistic sensibility, Puri noted that her voice possesses an organic, cinematic quality capable of evoking pure emotion and elevating narrative storytelling in mainstream cinema."
+            </p>
+            <div class="testimonial-author-tag">&mdash; Late Om Puri, Legendary Film &amp; Theater Actor</div>
+          </div>
+        </article>
+
+        <!-- Ali Khan -->
+        <article class="testimonial-card-featured">
+          <div class="testimonial-media">
+            <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vBMdEOFGc_IuaBLMyLOQVby-7_9nKmwI0DY-KqV9IIbfEeZPXBJArZEjbc6E5gBRl-8g1e7Lx7v-J4iWZcbW2WTvKSN9QEzDHAzkcdUaxj1mgA9k2R4e4WJTJFIZ1bce_4ILj2fZ98EeQjSGROqE51v1YZ2qYei3i9iR1H0_5ZUlv3ElCG0e5OjJpI4J6oTa-nhQIiHviwqLvN9Wy1rJw_H3eEA1feuW9tr1_8=w1280" alt="Ali Khan with Yashashree Bhave" loading="lazy">
+          </div>
+          <div class="testimonial-content">
+            <h2 class="testimonial-speaker"><i class="fa-solid fa-star"></i> Ali Khan</h2>
+            <p class="testimonial-quote">
+              "Veteran Bollywood actor Ali Khan lauded Yashashree Bhave's vocal texture, noting that her expressive tone carries the emotive grace heard in classic Hindi cinema, reminiscent of tracks voiced for leading actresses like Sonali Bendre in Sarfarosh. Khan praised her vocal versatility and expressed enthusiasm for her mainstream projects."
+            </p>
+            <div class="testimonial-author-tag">&mdash; Ali Khan, Bollywood Actor</div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Section 2: Audience Reviews Grid -->
+      <section style="margin-top: 48px;">
+        <h2 class="section-title">Verified Audience Reviews</h2>
+        <p class="section-subtitle">Real experiences shared by concert attendees and event organizers.</p>
+
+        <div class="reviews-masonry-grid">
+          <!-- Review 1 -->
+          <article class="audience-review-card">
+            <div class="reviewer-header">
+              <img class="reviewer-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjUreB4A7lTOcfCNwGPQWzmYr3VDnyBn5iYEmV83aWGamQapubAb=s120-c-rp-mo-br100" alt="Madhurima das" loading="lazy">
+              <div class="reviewer-meta">
+                <h4>Madhurima das</h4>
+                <span>Verified Google Review</span>
+              </div>
+            </div>
+            <div class="rating-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"She is a very talented and versatile singer and very energetic stage performer..."</p>
+            <div class="review-footer-action">
+              <a href="https://maps.google.com/maps?cid=10801988621236739829" target="_blank" rel="noopener noreferrer">
+                Read on Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="audience-review-card">
+            <div class="reviewer-header">
+              <img class="reviewer-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjWgg4apifnKZd8NUZFJja0IsM8GPMRtT_nrNN3K7NkeOxs0G7hJ=s120-c-rp-mo-br100" alt="Ritesh Soni" loading="lazy">
+              <div class="reviewer-meta">
+                <h4>Ritesh Soni</h4>
+                <span>Verified Google Review</span>
+              </div>
+            </div>
+            <div class="rating-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"Most Reverend! Outstanding musical presentation, powerful vocals, and flawless orchestra management."</p>
+            <div class="review-footer-action">
+              <a href="https://maps.google.com/maps?cid=10801988621236739829" target="_blank" rel="noopener noreferrer">
+                Read on Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="audience-review-card">
+            <div class="reviewer-header">
+              <img class="reviewer-avatar" src="https://lh3.googleusercontent.com/a/ACg8ocLZUiD5OwUIEfTSQfIhFV3QMfhrdhubLBwHhDamel6s_7FGLQ=s120-c-rp-mo-br100" alt="Anupama Singh" loading="lazy">
+              <div class="reviewer-meta">
+                <h4>Anupama Singh</h4>
+                <span>Verified Google Review</span>
+              </div>
+            </div>
+            <div class="rating-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"Combination of beautiful voice as well as beautiful stage persona. Highly recommended for live events!"</p>
+            <div class="review-footer-action">
+              <a href="https://maps.google.com/maps?cid=10801988621236739829" target="_blank" rel="noopener noreferrer">
+                Read on Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Review 4: Harjit Singh (Dubai) with Fixed Screenshot Container -->
+          <article class="audience-review-card">
+            <div class="review-screenshot-box">
+              <img src="https://lh7-us.googleusercontent.com/sitesv-images-rt/AMxu72vejyRSW1hvTEV-4egx6dZOWLopQYcKwktK8Y2aWV7KfuQgislpBsuHx9elJKQEcc0tk7TQJgEbgF-nH7bse2WgmD8-mN-9kRRcTMfpjQ40BGDXV8vu88sANXsQtftFNB6vHj0YzvtG90hvLGYwILHAPPY_Uix7fVkNzASQtQHcMG_RpHIe-u6x-3Pl6cyy4Hp6RQm09unh8AKOFBF-HJffqNE5sikKyjBddFLK4xs=w1280" alt="Harjit Singh recommendation screenshot" loading="lazy">
+            </div>
+            <div class="reviewer-header">
+              <div class="reviewer-meta">
+                <h4>Harjit Singh</h4>
+                <span>From Kapurthala &bull; Lives in Dubai</span>
+              </div>
+            </div>
+            <div class="rating-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"Words are not enough to compliment the singing style of Yashashree Bhave (Yashi Ji). When Yashi sings, it feels as if all nature pauses to listen. We are fortunate to experience such amazing feelings and pure entertainment."</p>
+            <div class="review-footer-action">
+              <span class="business-brand"><i class="fa-solid fa-circle-check"></i> Audience Endorsement</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Booking CTA -->
+      <div style="text-align: center; margin: 56px 0 20px;">
+        <a href="contact-us.html" class="btn btn-gold">Book Yashashree for a Live Show</a>
+        <a href="discography-videos.html" class="btn btn-glass" style="margin-left: 10px;">Watch Performance Videos</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <nav class="footer-nav-links" aria-label="Footer Navigation">
+        <a href="index.html">Home</a>
+        <a href="about-yashashree-bhave.html">About</a>
+        <a href="discography-videos.html">Music & Media</a>
+        <a href="singing-classes.html">Singing Classes</a>
+        <a href="testimonial.html">Reviews</a>
+        <a href="contact-us.html">Contact</a>
+      </nav>
+
+      <p class="footer-tagline">Connect with Yashashree Bhave on her official channels!</p>
+      
+      <div class="social-circle-strip" aria-label="Social media links">
+        <a href="https://www.facebook.com/YashashreeBhaveOfficial/" target="_blank" rel="noopener noreferrer" class="social-circle sc-fb" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/yashashreebhave/" target="_blank" rel="noopener noreferrer" class="social-circle sc-ig" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/yashashreebhave" target="_blank" rel="noopener noreferrer" class="social-circle sc-in" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="https://x.com/yashashreebhave" target="_blank" rel="noopener noreferrer" class="social-circle sc-x" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/c/YashashreeBhave/videos" target="_blank" rel="noopener noreferrer" class="social-circle sc-yt" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://starmaker.onelink.me/v4ei/e69p9svu" target="_blank" rel="noopener noreferrer" class="social-circle sc-sm" aria-label="StarMaker Profile">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+        </a>
+      </div>
+
+      <p class="footer-credits">&copy; 2026 Yashashree Bhave. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

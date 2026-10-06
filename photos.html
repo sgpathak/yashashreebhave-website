@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Yashashree Bhave Photos &amp; Official Press Kit | High-Res Images for Banners &amp; Media</title>
+  <meta name="description" content="Download high-resolution promotional stills, concert stage portraits, and official press kit visual assets for playback singer Yashashree Bhave. Perfect for paper media, flex banners, and event hoardings.">
+  <meta name="keywords" content="Yashashree Bhave photos, Indian Idol 2 finalist portraits, Yashashree Bhave press kit, singer high res images, concert banner photos, flex banner photos Yashashree Bhave">
+  <link rel="canonical" href="https://yashashreebhave.com/photos.html">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Schema.org ImageGallery & ImageObject Structured Data for Google & AI Search Indexing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Yashashree Bhave Official Press & Promo Kit",
+    "description": "High-resolution promotional photographs and concert portraits of playback singer Yashashree Bhave for event organizers, paper media, and banner design.",
+    "url": "https://yashashreebhave.com/photos.html",
+    "author": {
+      "@type": "MusicArtist",
+      "name": "Yashashree Bhave",
+      "alternateName": ["Yashi", "Indian Idol 2 Finalist"]
+    },
+    "associatedMedia": [
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://lh3.googleusercontent.com/d/1bMGXsRTxgXA2H51ua1v1EwkTBfxNE8Qf",
+        "name": "Yashashree Bhave Studio Promo Portrait 01",
+        "caption": "High-res promotional photo for concert banners, print hoardings, and press releases."
+      },
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://lh3.googleusercontent.com/d/1In39mCd4mkOEnNX2QAVYaIQC3-sDCued",
+        "name": "Yashashree Bhave Studio Promo Portrait 02",
+        "caption": "Clean vertical portrait ideal for standees, invitations, and flyer graphics."
+      },
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://lh3.googleusercontent.com/d/1Et9tZG8jZYWm3949I08qovAV7dPbh3JT",
+        "name": "Yashashree Bhave Performance Stage Promo 03",
+        "caption": "Dynamic live stage portrait suited for social media teasers and trailers."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Clean Spacing and Padding Overrides */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      margin-top: 24px;
+      margin-bottom: 48px;
+    }
+    .gallery-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+    }
+    .gallery-img-box {
+      position: relative;
+      width: 100%;
+      height: 420px;
+      background: #000;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .gallery-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+    .gallery-card:hover .gallery-img-box img {
+      transform: scale(1.04);
+    }
+    .gallery-zoom-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      gap: 10px;
+    }
+    .gallery-img-box:hover .gallery-zoom-overlay {
+      opacity: 1;
+    }
+    .gallery-card-body {
+      padding: 26px 24px !important;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+      gap: 20px !important;
+    }
+    .gallery-card-info h3 {
+      font-size: 1.15rem;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .gallery-card-info p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+    .gallery-btn-row {
+      display: flex;
+      gap: 14px !important;
+      margin-top: 6px;
+    }
+    .gallery-btn-row .btn {
+      flex: 1;
+      padding: 12px 18px !important;
+      font-size: 0.9rem !important;
+      border-radius: 30px !important;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* Fixed Lightbox Popup Styles */
+    .image-lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 999999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .image-lightbox.active {
+      display: flex !important;
+    }
+    .image-lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 8px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+      object-fit: contain;
+    }
+    .image-lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      color: #fff;
+      font-size: 42px;
+      font-weight: 300;
+      cursor: pointer;
+      line-height: 1;
+      background: transparent;
+      border: none;
+      z-index: 1000000;
+    }
+    .image-lightbox-close:hover {
+      color: var(--accent-gold);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-strip" aria-label="Key Honors">
+    Indian Idol Season 2 Finalist &bull; Sa Re Ga Ma Pa Final Runner-up &bull; Over 3,500+ Live Stage Shows
+  </aside>
+
+  <!-- Sticky Header -->
+  <header>
+    <div class="nav-bar">
+      <a href="index.html" class="brand-wrapper">
+        <img src="images/logo.png" alt="Yashashree Bhave Logo" class="brand-logo" onerror="this.style.display='none'">
+        <span class="brand-text">YASHASHREE BHAVE</span>
+      </a>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav aria-label="Primary Navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        
+        <!-- About & Journey Dropdown (Non-Link Parent) -->
+        <li class="nav-item-dropdown" id="dropdownAbout">
+          <span class="dropdown-trigger" onclick="toggleMobileDropdown(this)">
+            About &amp; Journey <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+          </span>
+          <ul class="dropdown-menu">
+            <li><a href="about-yashashree-bhave.html">About Yashashree Bhave</a></li>
+            <li><a href="indian-idol-2-journey.html">Indian Idol 2 Journey</a></li>
+            <li><a href="biography-musical-journey.html">Musical Biography</a></li>
+            <li><a href="awards-television-achievements.html">Awards &amp; Television</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-dropdown" id="dropdownMedia">
+          <span class="dropdown-trigger" onclick="toggleMobileDropdown(this)">
+            Music &amp; Media <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+          </span>
+          <ul class="dropdown-menu">
+            <li><a href="discography-videos.html">Discography &amp; Videos</a></li>
+            <li><a href="download-mp3-songs.html">Download MP3 Songs</a></li>
+            <li><a href="live-shows-concert-booking.html">Live Shows Gallery</a></li>
+            <li><a href="paper-media.html">Press &amp; Paper Media</a></li>
+            <li><a href="bollywood-legends.html">Bollywood Legends</a></li>
+          </ul>
+        </li>
+
+        <li><a href="photos.html">Photo Gallery</a></li>
+        <li><a href="singing-classes.html">Singing Classes</a></li>
+        <li><a href="testimonial.html">Reviews</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container page-wrapper">
+
+      <!-- SEO & Press Header -->
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="stage-pill" style="display: inline-flex; margin: 0 auto 16px;">Official Press &amp; Media Kit</span>
+        <h1 class="section-title">YASHASHREE BHAVE &ndash; HIGH-RESOLUTION PROMOTIONAL PHOTOS &amp; ASSETS</h1>
+        <p class="section-subtitle" style="margin: 0 auto 32px; max-width: 800px;">
+          Welcome to the official press kit and visual asset repository for <strong>Yashashree Bhave</strong> (Indian Idol Season 2 Finalist &amp; Zee Sa Re Ga Ma Pa Final Runner-up). These promotional images are authorized for concert organizers, event planners, creative agencies, and press media for designing show hoardings, stage banners, ticketing assets, and flyers.
+        </p>
+
+        <div class="guidelines-grid" style="max-width: 960px; margin: 0 auto;">
+          <div class="guideline-item">
+            <strong>Print &amp; Flex Media</strong>
+            <span>High-definition resolution suitable for large-format stage backdrops, standees, and outdoor hoardings.</span>
+          </div>
+          <div class="guideline-item">
+            <strong>Digital &amp; Social</strong>
+            <span>Optimized framing for Instagram flyers, event ticketing portals, and digital show posters.</span>
+          </div>
+          <div class="guideline-item">
+            <strong>Direct Originals</strong>
+            <span>Files are downloaded directly in original resolution with no login needed.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Section -->
+      <section style="margin-top: 20px;">
+        <div style="text-align: center; margin-bottom: 28px;">
+          <h2 style="font-family: 'Cinzel', serif; font-size: 1.6rem; color: #fff; margin-bottom: 6px;">Promotional Stills &amp; Studio Portraits</h2>
+          <span style="color: var(--text-muted); font-size: 0.9rem;">Tap preview to zoom &bull; Tap download to save directly to gallery</span>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Photo 1 -->
+          <article class="gallery-card">
+            <div class="gallery-img-box" onclick="openImageLightbox('https://lh3.googleusercontent.com/d/1bMGXsRTxgXA2H51ua1v1EwkTBfxNE8Qf')">
+              <img src="https://lh3.googleusercontent.com/d/1bMGXsRTxgXA2H51ua1v1EwkTBfxNE8Qf" alt="Yashashree Bhave Official Promo Portrait 1" loading="lazy">
+              <div class="gallery-zoom-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Tap to Zoom
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-info">
+                <h3>Studio Promo Portrait 01</h3>
+                <p>Ideal for main concert banners, print hoardings, and press releases.</p>
+              </div>
+              <div class="gallery-btn-row">
+                <button type="button" class="btn btn-glass" onclick="openImageLightbox('https://lh3.googleusercontent.com/d/1bMGXsRTxgXA2H51ua1v1EwkTBfxNE8Qf')"><i class="fa-solid fa-magnifying-glass"></i> Zoom</button>
+                <button type="button" class="btn btn-gold" onclick="triggerFileDownload('https://lh3.googleusercontent.com/d/1bMGXsRTxgXA2H51ua1v1EwkTBfxNE8Qf', 'Yashashree-Bhave-Portrait-01.jpg', this)"><i class="fa-solid fa-download"></i> Download</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Photo 2 -->
+          <article class="gallery-card">
+            <div class="gallery-img-box" onclick="openImageLightbox('https://lh3.googleusercontent.com/d/1In39mCd4mkOEnNX2QAVYaIQC3-sDCued')">
+              <img src="https://lh3.googleusercontent.com/d/1In39mCd4mkOEnNX2QAVYaIQC3-sDCued" alt="Yashashree Bhave Official Promo Portrait 2" loading="lazy">
+              <div class="gallery-zoom-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Tap to Zoom
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-info">
+                <h3>Studio Promo Portrait 02</h3>
+                <p>Clean vertical cut ideal for standees, invitations, and flyer graphics.</p>
+              </div>
+              <div class="gallery-btn-row">
+                <button type="button" class="btn btn-glass" onclick="openImageLightbox('https://lh3.googleusercontent.com/d/1In39mCd4mkOEnNX2QAVYaIQC3-sDCued')"><i class="fa-solid fa-magnifying-glass"></i> Zoom</button>
+                <button type="button" class="btn btn-gold" onclick="triggerFileDownload('https://lh3.googleusercontent.com/d/1In39mCd4mkOEnNX2QAVYaIQC3-sDCued', 'Yashashree-Bhave-Portrait-02.jpg', this)"><i class="fa-solid fa-download"></i> Download</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Photo 3 -->
+          <article class="gallery-card">
+            <div class="gallery-img-box" onclick="openImageLightbox('https://lh3.googleusercontent.com/d/1Et9tZG8jZYWm3949I08qovAV7dPbh3JT')">
+              <img src="https://lh3.googleusercontent.com/d/1Et9tZG8jZYWm3949I08qovAV7dPbh3JT" alt="Yashashree Bhave Official Promo Portrait 3" loading="lazy">
+              <div class="gallery-zoom-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Tap to Zoom
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-info">
+                <h3>Performance &amp; Stage Promo 03</h3>
+                <p>Dynamic expression portrait suited for social media teasers and trailers.</p>
+              </div>
+              <div class="gallery-btn-row">
+                <button type="button" class="btn btn-glass" onclick="openImageLightbox('https://lh3.googleusercontent.com/d/1Et9tZG8jZYWm3949I08qovAV7dPbh3JT')"><i class="fa-solid fa-magnifying-glass"></i> Zoom</button>
+                <button type="button" class="btn btn-gold" onclick="triggerFileDownload('https://lh3.googleusercontent.com/d/1Et9tZG8jZYWm3949I08qovAV7dPbh3JT', 'Yashashree-Bhave-Portrait-03.jpg', this)"><i class="fa-solid fa-download"></i> Download</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Short Bio for Show Organizers -->
+      <aside class="gallery-bio-box" style="margin-top: 40px;">
+        <h3>Short Bio for Event Collateral &amp; Anchor Introductions</h3>
+        <p>
+          "Yashashree Bhave is an Indian playback and live concert vocalist celebrated for reaching the grand finals of <em>Indian Idol Season 2</em> and securing the Final Runner-up title on <em>Zee Sa Re Ga Ma Pa</em>. Renowned for her vocal versatility spanning Bollywood classics, Sufi, ghazals, and high-energy contemporary numbers, she performs regularly at major music festivals, corporate galas, and cultural concerts worldwide."
+        </p>
+      </aside>
+
+    </div><!-- /.page-wrapper -->
+  </main>
+
+  <!-- FULL-WIDTH BRANDED FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav-links" aria-label="Footer Navigation">
+        <a href="index.html">Home</a>
+        <a href="about-yashashree-bhave.html">About</a>
+        <a href="discography-videos.html">Music & Media</a>
+        <a href="singing-classes.html">Singing Classes</a>
+        <a href="testimonial.html">Reviews</a>
+        <a href="contact-us.html">Contact</a>
+      </nav>
+
+      <div class="footer-tagline">Connect with Yashashree Bhave</div>
+
+      <!-- Colorful Social Icons -->
+      <div class="social-circle-strip">
+        <a href="https://www.facebook.com/YashashreeBhaveOfficial/" target="_blank" rel="noopener" class="social-circle btn-fb" title="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/yashashreebhave/" target="_blank" rel="noopener" class="social-circle btn-insta" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/yashashree-bhave" target="_blank" rel="noopener" class="social-circle btn-linkedin" title="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <a href="https://www.x.com/yashashreebhave?lang=en" target="_blank" rel="noopener" class="social-circle btn-x" title="X (Twitter)">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="https://www.youtube.com/c/YashashreeBhave/videos" target="_blank" rel="noopener" class="social-circle btn-yt" title="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="https://www.starmakerstudios.com/#/videoinfo/4785074259552762" target="_blank" rel="noopener" class="social-circle btn-starmaker" title="StarMaker">
+          <i class="fa-solid fa-microphone-lines"></i>
+        </a>
+      </div>
+
+      <div class="footer-contact-info" style="color: var(--text-muted); font-size: 0.9rem;">
+        Concert Bookings &amp; Inquiries: <a href="tel:+919823394218">+91 98233 94218</a> | <a href="mailto:sgpathak@gmail.com">sgpathak@gmail.com</a>
+      </div>
+
+      <div class="footer-credits">
+        &copy; 2026 Yashashree Bhave (Yashi). All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Popup Modal -->
+  <div class="image-lightbox" id="imageLightbox" onclick="closeImageLightbox(event)">
+    <button type="button" class="image-lightbox-close" onclick="closeImageLightbox(event)">&times;</button>
+    <img id="lightboxImg" src="" alt="Enlarged Preview">
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
