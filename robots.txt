@@ -1,0 +1,6 @@
+# Allow all search engines and AI web crawlers to index the site
+User-agent: *
+Allow: /
+
+# Direct crawlers to your newly created XML sitemap
+Sitemap: https://yashashreebhave.com/sitemap.xml
