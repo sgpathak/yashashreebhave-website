@@ -1470,3 +1470,42 @@ header {
   background: #000;
   margin-bottom: 10px;
 }
+
+@media (max-width: 920px) {
+  /* Fix mobile navigation drawer to slide smoothly across full width or proper side */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: #090b10;
+    border-left: 1px solid var(--border-card);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 70px 24px 30px;
+    gap: 12px;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
+    transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+
+  /* Fix lightbox popup sizing on mobile */
+  .image-lightbox img,
+  .lightbox-image-wrap img {
+    max-width: 95vw !important;
+    max-height: 70vh !important;
+    object-fit: contain !important;
+  }
+
+  .lightbox-container {
+    padding: 16px !important;
+    max-width: 95vw !important;
+  }
+}
