@@ -1571,3 +1571,7 @@ header::before {
 .gallery-btn-row .btn i {
   font-size: 0.9rem;
 }
+
+.reduce_margin_bottom {
+  margin-bottom: 0;
+}
