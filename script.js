@@ -2,14 +2,26 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile Navigation Drawer Toggle
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
+  const navCloseBtn = document.getElementById('navCloseBtn');
 
   if (navToggle && navLinks) {
-    navToggle.addEventListener('click', () => {
+    // Open/Close menu via hamburger click
+    navToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       navToggle.classList.toggle('open');
       navLinks.classList.toggle('active');
     });
 
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    // Close menu via 'X' close button inside the drawer
+    if (navCloseBtn) {
+      navCloseBtn.addEventListener('click', () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('active');
+      });
+    }
+
+    // Close menu when clicking standard navigation links
+    document.querySelectorAll('.nav-links a:not(.dropdown-trigger)').forEach(link => {
       link.addEventListener('click', () => {
         navToggle.classList.remove('open');
         navLinks.classList.remove('active');
@@ -59,7 +71,7 @@ function closePlayerModal(e) {
   }
 }
 
-// Add this to your existing script.js
+// Contact Form Data Handlers
 function getContactFormData() {
   const name = document.getElementById('clientName')?.value.trim() || 'Not provided';
   const phone = document.getElementById('clientPhone')?.value.trim() || 'Not provided';
@@ -110,7 +122,6 @@ function submitContactWhatsApp() {
   );
   window.open("https://wa.me/919823394218?text=" + text, "_blank");
 }
-
 
 // Image Lightbox Handlers
 function openImageLightbox(url) {

@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Schema.org ImageGallery & ImageObject Structured Data for Google & AI Search Indexing -->
+  <!-- Schema.org ImageGallery & ImageObject Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,134 +48,6 @@
     ]
   }
   </script>
-
-  <style>
-    /* Clean Spacing and Padding Overrides */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-      margin-top: 24px;
-      margin-bottom: 48px;
-    }
-    .gallery-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-card);
-      border-radius: 16px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.25s ease;
-    }
-    .gallery-img-box {
-      position: relative;
-      width: 100%;
-      height: 420px;
-      background: #000;
-      overflow: hidden;
-      cursor: pointer;
-    }
-    .gallery-img-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.35s ease;
-    }
-    .gallery-card:hover .gallery-img-box img {
-      transform: scale(1.04);
-    }
-    .gallery-zoom-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.25s ease;
-      color: #fff;
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      gap: 10px;
-    }
-    .gallery-img-box:hover .gallery-zoom-overlay {
-      opacity: 1;
-    }
-    .gallery-card-body {
-      padding: 26px 24px !important;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      justify-content: space-between;
-      gap: 20px !important;
-    }
-    .gallery-card-info h3 {
-      font-size: 1.15rem;
-      color: #fff;
-      margin-bottom: 8px;
-    }
-    .gallery-card-info p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.55;
-    }
-    .gallery-btn-row {
-      display: flex;
-      gap: 14px !important;
-      margin-top: 6px;
-    }
-    .gallery-btn-row .btn {
-      flex: 1;
-      padding: 12px 18px !important;
-      font-size: 0.9rem !important;
-      border-radius: 30px !important;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    /* Fixed Lightbox Popup Styles */
-    .image-lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.92);
-      z-index: 999999;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .image-lightbox.active {
-      display: flex !important;
-    }
-    .image-lightbox img {
-      max-width: 90vw;
-      max-height: 85vh;
-      border-radius: 8px;
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
-      object-fit: contain;
-    }
-    .image-lightbox-close {
-      position: absolute;
-      top: 20px;
-      right: 25px;
-      color: #fff;
-      font-size: 42px;
-      font-weight: 300;
-      cursor: pointer;
-      line-height: 1;
-      background: transparent;
-      border: none;
-      z-index: 1000000;
-    }
-    .image-lightbox-close:hover {
-      color: var(--accent-gold);
-    }
-  </style>
 </head>
 <body>
 
@@ -197,41 +69,47 @@
       </button>
 
       <nav aria-label="Primary Navigation">
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        
-        <!-- About & Journey Dropdown (Non-Link Parent) -->
-        <li class="nav-item-dropdown" id="dropdownAbout">
-          <span class="dropdown-trigger" onclick="toggleMobileDropdown(this)">
-            About &amp; Journey <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
-          </span>
-          <ul class="dropdown-menu">
-            <li><a href="about-yashashree-bhave.html">About Yashashree Bhave</a></li>
-            <li><a href="indian-idol-2-journey.html">Indian Idol 2 Journey</a></li>
-            <li><a href="biography-musical-journey.html">Musical Biography</a></li>
-            <li><a href="awards-television-achievements.html">Awards &amp; Television</a></li>
-          </ul>
-        </li>
+        <ul class="nav-links" id="navLinks">
+          <!-- Close Button for Mobile Drawer -->
+          <li class="mobile-menu-header">
+            <span class="menu-brand-title">Menu</span>
+            <button type="button" class="nav-close-btn" id="navCloseBtn" aria-label="Close navigation menu">&times;</button>
+          </li>
+          <li><a href="index.html">Home</a></li>
+          
+          <!-- About & Journey Dropdown -->
+          <li class="nav-item-dropdown" id="dropdownAbout">
+            <span class="dropdown-trigger" onclick="toggleMobileDropdown(this)">
+              About &amp; Journey <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </span>
+            <ul class="dropdown-menu">
+              <li><a href="about-yashashree-bhave.html">About Yashashree Bhave</a></li>
+              <li><a href="indian-idol-2-journey.html">Indian Idol 2 Journey</a></li>
+              <li><a href="biography-musical-journey.html">Musical Biography</a></li>
+              <li><a href="awards-television-achievements.html">Awards &amp; Television</a></li>
+            </ul>
+          </li>
 
-        <li class="nav-item-dropdown" id="dropdownMedia">
-          <span class="dropdown-trigger" onclick="toggleMobileDropdown(this)">
-            Music &amp; Media <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
-          </span>
-          <ul class="dropdown-menu">
-            <li><a href="discography-videos.html">Discography &amp; Videos</a></li>
-            <li><a href="download-mp3-songs.html">Download MP3 Songs</a></li>
-            <li><a href="live-shows-concert-booking.html">Live Shows Gallery</a></li>
-            <li><a href="paper-media.html">Press &amp; Paper Media</a></li>
-            <li><a href="bollywood-legends.html">Bollywood Legends</a></li>
-          </ul>
-        </li>
+          <!-- Music & Media Dropdown -->
+          <li class="nav-item-dropdown" id="dropdownMedia">
+            <span class="dropdown-trigger" onclick="toggleMobileDropdown(this)">
+              Music &amp; Media <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </span>
+            <ul class="dropdown-menu">
+              <li><a href="discography-videos.html">Discography &amp; Videos</a></li>
+              <li><a href="download-mp3-songs.html">Download MP3 Songs</a></li>
+              <li><a href="live-shows-concert-booking.html">Live Shows Gallery</a></li>
+              <li><a href="paper-media.html">Press &amp; Paper Media</a></li>
+              <li><a href="bollywood-legends.html">Bollywood Legends</a></li>
+            </ul>
+          </li>
 
-        <li><a href="photos.html">Photo Gallery</a></li>
-        <li><a href="singing-classes.html">Singing Classes</a></li>
-        <li><a href="testimonial.html">Reviews</a></li>
-        <li><a href="contact-us.html">Contact</a></li>
-      </ul>
-    </nav>
+          <li><a href="photos.html" class="active">Photo Gallery</a></li>
+          <li><a href="singing-classes.html">Singing Classes</a></li>
+          <li><a href="testimonial.html">Reviews</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -243,7 +121,7 @@
         <span class="stage-pill" style="display: inline-flex; margin: 0 auto 16px;">Official Press &amp; Media Kit</span>
         <h1 class="section-title">YASHASHREE BHAVE &ndash; HIGH-RESOLUTION PROMOTIONAL PHOTOS &amp; ASSETS</h1>
         <p class="section-subtitle" style="margin: 0 auto 32px; max-width: 800px;">
-          Welcome to the official press kit and visual asset repository for <strong>Yashashree Bhave</strong> (Indian Idol Season 2 Finalist &amp; Zee Sa Re Ga Ma Pa Final Runner-up). These promotional images are authorized for concert organizers, event planners, creative agencies, and press media for designing show hoardings, stage banners, ticketing assets, and flyers.
+          Welcome to the official press kit and visual asset repository for <strong>Yashashree Bhave</strong> (Indian Idol Season 2 Finalist &amp; Zee Sa Re Ga Ma Pa Final Runner-up). These promotional images are authorized for concert organizers, event planners, creative agencies, and press media.
         </p>
 
         <div class="guidelines-grid" style="max-width: 960px; margin: 0 auto;">
@@ -333,14 +211,14 @@
       </section>
 
       <!-- Short Bio for Show Organizers -->
-      <aside class="gallery-bio-box" style="margin-top: 40px;">
-        <h3>Short Bio for Event Collateral &amp; Anchor Introductions</h3>
-        <p>
+      <aside class="gallery-bio-box" style="margin-top: 40px; background: var(--bg-card); border: 1px solid var(--border-card); padding: 24px; border-radius: 14px;">
+        <h3 style="color: #fff; margin-bottom: 10px;">Short Bio for Event Collateral &amp; Anchor Introductions</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
           "Yashashree Bhave is an Indian playback and live concert vocalist celebrated for reaching the grand finals of <em>Indian Idol Season 2</em> and securing the Final Runner-up title on <em>Zee Sa Re Ga Ma Pa</em>. Renowned for her vocal versatility spanning Bollywood classics, Sufi, ghazals, and high-energy contemporary numbers, she performs regularly at major music festivals, corporate galas, and cultural concerts worldwide."
         </p>
       </aside>
 
-    </div><!-- /.page-wrapper -->
+    </div>
   </main>
 
   <!-- FULL-WIDTH BRANDED FOOTER -->
@@ -362,23 +240,18 @@
         <a href="https://www.facebook.com/YashashreeBhaveOfficial/" target="_blank" rel="noopener" class="social-circle btn-fb" title="Facebook">
           <i class="fa-brands fa-facebook-f"></i>
         </a>
-
         <a href="https://www.instagram.com/yashashreebhave/" target="_blank" rel="noopener" class="social-circle btn-insta" title="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
-
         <a href="https://www.linkedin.com/in/yashashree-bhave" target="_blank" rel="noopener" class="social-circle btn-linkedin" title="LinkedIn">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
-
         <a href="https://www.x.com/yashashreebhave?lang=en" target="_blank" rel="noopener" class="social-circle btn-x" title="X (Twitter)">
           <i class="fa-brands fa-x-twitter"></i>
         </a>
-
         <a href="https://www.youtube.com/c/YashashreeBhave/videos" target="_blank" rel="noopener" class="social-circle btn-yt" title="YouTube">
           <i class="fa-brands fa-youtube"></i>
         </a>
-
         <a href="https://www.starmakerstudios.com/#/videoinfo/4785074259552762" target="_blank" rel="noopener" class="social-circle btn-starmaker" title="StarMaker">
           <i class="fa-solid fa-microphone-lines"></i>
         </a>

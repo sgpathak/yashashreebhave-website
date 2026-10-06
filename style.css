@@ -48,15 +48,22 @@ a:hover { color: var(--accent-gold-bright); }
   border-bottom: 1px solid rgba(212, 175, 55, 0.15);
 }
 
-/* --- Single Header, Navigation & Dropdown Styling --- */
+/* --- Sticky Header & Navigation --- */
 header {
   position: sticky;
   top: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  z-index: 1000;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: rgba(7, 8, 11, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-  z-index: 1000;
+  z-index: -1;
 }
 
 .nav-bar {
@@ -207,31 +214,34 @@ header {
   }
 }
 
-/* Mobile Responsive Drawer & Dropdown Fix */
+/* --- Mobile Navigation Drawer Fix (Single Definitive Block) --- */
 @media (max-width: 920px) {
   .nav-bar { padding: 10px 16px; }
   .brand-text { font-size: 1.05rem; }
-  .nav-toggle { display: block; }
+  .nav-toggle { display: block !important; }
   
   .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 300px;
-    height: 100vh;
-    background: #090b10;
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important;
+    left: auto !important;
+    width: 280px !important;
+    height: 100vh !important;
+    background: #090b10 !important;
     border-left: 1px solid var(--border-card);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 70px 24px 30px;
-    gap: 12px;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
-    transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 999;
-    overflow-y: auto;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 70px 24px 30px !important;
+    gap: 12px !important;
+    box-shadow: -15px 0 40px rgba(0, 0, 0, 0.9) !important;
+    transition: right 0.3s ease-in-out !important;
+    z-index: 99999 !important;
+    overflow-y: auto !important;
   }
   
-  .nav-links.active { right: 0; }
+  .nav-links.active {
+    right: 0 !important;
+  }
   
   .nav-links a {
     font-size: 0.95rem;
@@ -253,12 +263,12 @@ header {
 
   .nav-item-dropdown .dropdown-menu {
     display: none !important;
-    position: static;
-    background: rgba(0, 0, 0, 0.25);
-    border: none;
-    box-shadow: none;
-    padding-left: 16px;
-    width: 100%;
+    position: static !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding-left: 16px !important;
+    width: 100% !important;
   }
 
   .nav-item-dropdown.open .dropdown-menu {
@@ -1325,29 +1335,7 @@ header {
   }
 }
 
-/* 1. Add comfortable spacing between Google Review action buttons */
-.g-review-action-row {
-  display: flex;
-  align-items: center;
-  gap: 16px !important; /* Ensures space between the buttons */
-  flex-wrap: wrap;
-}
-
-.btn-write-review {
-  background: var(--accent-gold-gradient);
-  color: #07080b;
-  font-weight: 700;
-  padding: 10px 20px !important;
-  border-radius: 50px;
-  font-size: 0.88rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-/* --- Fix 1: Spacing between Review Buttons --- */
+/* Review Action & Spacing */
 .g-review-action-row {
   display: flex;
   align-items: center;
@@ -1377,15 +1365,14 @@ header {
   color: #000;
 }
 
-
-/* --- Fix 2: Side-by-Side Celebrity Testimonial Cards (Uncropped Images) --- */
+/* Side-by-Side Celebrity Testimonial Cards (Uncropped Images) */
 .testimonial-card-featured {
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: 16px;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 320px 1fr !important; /* Forces side-by-side layout */
+  grid-template-columns: 320px 1fr !important;
   margin-bottom: 28px;
   backdrop-filter: blur(10px);
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -1410,7 +1397,7 @@ header {
   width: 100%;
   height: auto;
   max-height: 380px;
-  object-fit: contain !important; /* Preserves full photo without cropping */
+  object-fit: contain !important;
   display: block;
   border-radius: 8px;
 }
@@ -1422,7 +1409,6 @@ header {
   justify-content: center;
 }
 
-/* Responsive fallback for smaller screens */
 @media (max-width: 820px) {
   .testimonial-card-featured {
     grid-template-columns: 1fr !important;
@@ -1459,7 +1445,6 @@ header {
   border-color: rgba(212, 175, 55, 0.4);
 }
 
-/* Constrain and style review screenshot images */
 .audience-review-card img.review-screenshot, 
 .audience-review-card .reviewer-avatar + img,
 .audience-review-card img:not(.reviewer-avatar) {
@@ -1471,41 +1456,118 @@ header {
   margin-bottom: 10px;
 }
 
+/* Lightbox Popup Viewport Bound */
+.image-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.94);
+  z-index: 999999;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.image-lightbox.active {
+  display: flex !important;
+}
+
+.image-lightbox img {
+  max-width: 85vw !important;
+  max-height: 55vh !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #fff;
+  font-size: 38px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  z-index: 1000000;
+}
+
+/* --- Mobile Menu Header & Close 'X' Button Styling --- */
+.mobile-menu-header {
+  display: none;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-brand-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  color: var(--accent-gold-bright);
+  font-weight: 700;
+}
+
+.nav-close-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+  transition: color 0.2s ease;
+}
+
+.nav-close-btn:hover {
+  color: var(--accent-gold);
+}
+
+/* Enable mobile menu header display inside the active drawer */
 @media (max-width: 920px) {
-  /* Fix mobile navigation drawer to slide smoothly across full width or proper side */
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 320px;
-    height: 100vh;
-    background: #090b10;
-    border-left: 1px solid var(--border-card);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 70px 24px 30px;
-    gap: 12px;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
-    transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 1000;
-    overflow-y: auto;
+  .mobile-menu-header {
+    display: flex;
   }
-  
-  .nav-links.active {
-    right: 0;
-  }
+}
 
-  /* Fix lightbox popup sizing on mobile */
-  .image-lightbox img,
-  .lightbox-image-wrap img {
-    max-width: 95vw !important;
-    max-height: 70vh !important;
-    object-fit: contain !important;
-  }
+/* --- Fix 2nd Screenshot: Button Spacing & Icon Padding --- */
+.gallery-btn-row {
+  display: flex;
+  gap: 12px !important; /* Adds clear separation between Zoom and Download buttons */
+}
 
-  .lightbox-container {
-    padding: 16px !important;
-    max-width: 95vw !important;
-  }
+.gallery-btn-row .btn {
+  gap: 8px !important; /* Adds padding/spacing between font-awesome icon and button text */
+  padding: 10px 18px !important;
+  white-space: nowrap;
+}
+
+/* --- Gallery Card Button Spacing & Padding Correction --- */
+.gallery-btn-row {
+  display: flex;
+  gap: 14px !important; /* Forces a clear gap between Zoom and Download buttons */
+  align-items: center;
+  margin-top: 8px;
+}
+
+.gallery-btn-row .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px !important; /* Clean space between FontAwesome icon and button text */
+  padding: 11px 20px !important; /* Comfortable internal button padding */
+  font-size: 0.88rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border-radius: 30px;
+}
+
+/* Ensure icons scale and align nicely */
+.gallery-btn-row .btn i {
+  font-size: 0.9rem;
 }
