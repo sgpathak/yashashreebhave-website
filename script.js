@@ -181,19 +181,24 @@ function toggleMobileDropdown(element) {
 }
 
 
-// Lightweight Unique Visitor Counter for Home Page
+// Lightweight Unique Visitor Counter (v2 API)
 document.addEventListener("DOMContentLoaded", function() {
   const counterElement = document.getElementById('visitorCount');
   if (!counterElement) return; // Exit if not on the home page
 
   const hasVisited = sessionStorage.getItem('yashashree_visited');
-  const endpoint = hasVisited ? '' : '/up';
+  
+  // CounterAPI v2 endpoint structure
+  const apiUrl = hasVisited 
+    ? 'https://api.counterapi.dev/v2/yashashreebhave/visits' 
+    : 'https://api.counterapi.dev/v2/yashashreebhave/visits/up';
 
-  fetch('https://api.counterapi.dev/v1/yashashreebhave/visits' + endpoint)
+  fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
-      if (data && data.count) {
-        counterElement.innerText = data.count.toLocaleString();
+      // v2 returns the value directly in data.value
+      if (data && typeof data.value !== 'undefined') {
+        counterElement.innerText = data.value.toLocaleString();
         if (!hasVisited) {
           sessionStorage.setItem('yashashree_visited', 'true');
         }
