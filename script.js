@@ -181,25 +181,27 @@ function toggleMobileDropdown(element) {
 }
 
 
-// Check if this visitor has already been counted in this session
+// Lightweight Unique Visitor Counter for Home Page
+document.addEventListener("DOMContentLoaded", function() {
+  const counterElement = document.getElementById('visitorCount');
+  if (!counterElement) return; // Exit if not on the home page
+
   const hasVisited = sessionStorage.getItem('yashashree_visited');
-  
-  // Choose endpoint: 'up' increments the count, '' just fetches the current count without incrementing on refresh
   const endpoint = hasVisited ? '' : '/up';
 
   fetch('https://api.counterapi.dev/v1/yashashreebhave/visits' + endpoint)
     .then(response => response.json())
     .then(data => {
       if (data && data.count) {
-        document.getElementById('visitorCount').innerText = data.count.toLocaleString();
-        // Mark session as counted so refreshing won't trigger another increment
+        counterElement.innerText = data.count.toLocaleString();
         if (!hasVisited) {
           sessionStorage.setItem('yashashree_visited', 'true');
         }
       } else {
-        document.getElementById('visitorCount').innerText = '1';
+        counterElement.innerText = '1';
       }
     })
     .catch(() => {
-      document.getElementById('visitorCount').innerText = '1+';
+      counterElement.innerText = '1+';
     });
+});
