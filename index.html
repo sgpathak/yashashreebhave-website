@@ -27,64 +27,66 @@
   <meta name="twitter:description" content="Official website of Yashashree Bhave – Indian Idol Season 2 Top Finalist & Sa Re Ga Ma Pa Runner-up.">
   <meta name="twitter:image" content="https://yashashreebhave.com/images/hero-banner.webp">
 
+  <!-- Schema 1: Local Business -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Y.B Musical Events & Orchestra",
-  "image": "https://yashashreebhave.com/images/hero-banner.webp",
-  "@id": "https://yashashreebhave.com/",
-  "url": "https://yashashreebhave.com/",
-  "telephone": "+91-9823394218",
-  "email": "sgpathak@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Plot no 27, flat no 401, Durvang Enclave 1, Patil Layout, Indraprastha Nagar",
-    "addressLocality": "Nagpur",
-    "addressRegion": "Maharashtra",
-    "postalCode": "440022",
-    "addressCountry": "IN"
-  },
-  "founder": {
-    "@type": "Person",
-    "name": "Yashashree Bhave"
-  },
-  "priceRange": "$$"
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Y.B Musical Events & Orchestra",
+    "image": "https://yashashreebhave.com/images/hero-banner.webp",
+    "@id": "https://yashashreebhave.com/",
+    "url": "https://yashashreebhave.com/",
+    "telephone": "+91-9823394218",
+    "email": "sgpathak@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plot no 27, flat no 401, Durvang Enclave 1, Patil Layout, Indraprastha Nagar",
+      "addressLocality": "Nagpur",
+      "addressRegion": "Maharashtra",
+      "postalCode": "440022",
+      "addressCountry": "IN"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Yashashree Bhave"
+    },
+    "priceRange": "$$"
+  }
+  </script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How can I book Yashashree Bhave for a live show or wedding?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Direct bookings are handled by management via email at sgpathak@gmail.com or phone at +91-9823394218, or via the online booking form on the contact page."
+  <!-- Schema 2: FAQ Page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How can I book Yashashree Bhave for a live show or wedding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Direct bookings are handled by management via email at sgpathak@gmail.com or phone at +91-9823394218, or via the online booking form on the contact page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the format for online singing classes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Classes are conducted live over Zoom and Google Meet worldwide, covering classical swara identification, riyaz routines, voice culture, and playback singing techniques."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I see all of her Indian Idol and television performances?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can read the complete backstory and watch rare green room clips on the dedicated Indian Idol 2 Journey page on yashashreebhave.com."
+        }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the format for online singing classes?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Classes are conducted live over Zoom and Google Meet worldwide, covering classical swara identification, riyaz routines, voice culture, and playback singing techniques."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where can I see all of her Indian Idol and television performances?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can read the complete backstory and watch rare green room clips on the dedicated Indian Idol 2 Journey page on yashashreebhave.com."
-      }
-    }
-  ]
-}
-</script>
+    ]
+  }
+  </script>
 
   <!-- Deferred Google tag (gtag.js) - Fixes Forced Reflow -->
 <script>
@@ -104,17 +106,29 @@
   });
 </script>
 
+<!-- Schema 3: Person (Musician) & Service (Fixed Validator Errors) -->
   <script type="application/ld+json">
   [
     {
       "@context": "https://schema.org",
-      "@type": "MusicArtist",
+      "@type": "Person",
       "name": "Yashashree Bhave",
       "alternateName": ["Yashi", "Yashashree Bhave Nagpur"],
       "url": "https://yashashreebhave.com/",
       "image": "https://yashashreebhave.com/images/hero-banner.webp",
-      "jobTitle": ["Bollywood Playback Singer", "Live Stage Performer", "Vocal Mentor"],
-      "genre": ["Bollywood Playback", "Indian light-music", "Hindi Bollywood Songs", "Marathi Bhavgeet"],
+      "jobTitle": "Bollywood Playback Singer",
+      "genre": [
+        "Bollywood Playback", 
+        "Indian Classical", 
+        "Sufi", 
+        "Marathi Bhavgeet", 
+        "Pop",
+        "Hindi Ghazals",
+        "Marathi Regional Music",
+        "Bhajans",
+        "Navratri Jagran",
+        "Krishna Janmashtami Devotional"
+      ],
       "sameAs": [
         "https://www.youtube.com/c/YashashreeBhave/videos",
         "https://www.facebook.com/YashashreeBhaveOfficial/",
@@ -129,13 +143,42 @@
       "@type": "Service",
       "serviceType": "Singing Classes (Online / Offline)",
       "provider": {
-        "@type": "MusicArtist",
+        "@type": "Person",
         "name": "Yashashree Bhave"
       },
       "description": "Professional vocal training and singing lessons (Online globally & Offline in Nagpur) covering Classical Swaras, Bollywood playback techniques, and stage performance."
     }
   ]
   </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Yashashree",
+      "genre": [
+        "Bollywood Music",
+        "Hindi Ghazals",
+        "Marathi Cinema",
+        "Marathi Regional Music",
+        "Hindu Devotional",
+        "Bhajans",
+        "Navratri Jagran",
+        "Krishna Janmashtami Devotional"
+      ],
+      "knowsAbout": [
+        "Bollywood Songs",
+        "Bollywood Ghazals",
+        "Marathi Songs",
+        "Hindi Bhajans",
+        "Marathi Bhajans",
+        "Bhajan Jamming",
+        "Jagran Performances",
+        "Janmashtami Special Events"
+      ]
+    }
+  </script>
+  
 </head>
 <body>
 
