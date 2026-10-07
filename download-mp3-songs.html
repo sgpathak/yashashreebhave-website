@@ -11,8 +11,8 @@
   <link rel="canonical" href="https://yashashreebhave.com/download-mp3-songs.html">
 
   <link rel="stylesheet" href="style.css">
- <!-- FontAwesome Asynchronous Loading -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">  <!-- Favicon Icon Integration -->
+  <!-- Font Awesome CDN Link (Fixes Missing Icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" type="image/png" href="images/logo.png">
 
   <!-- Open Graph / WhatsApp / Facebook Meta Tags -->
@@ -29,23 +29,22 @@
   <meta name="twitter:description" content="Stream and download official MP3 tracks sung by playback singer Yashashree Bhave.">
   <meta name="twitter:image" content="https://yashashreebhave.com/images/hero-banner.jpg">
 
-  <!-- Deferred Google tag (gtag.js) - Fixes Forced Reflow -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-405K9Q99PP');
+  <!-- Deferred Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-405K9Q99PP');
 
-  // Lazy-load the external analytics script after the page fully loads
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-405K9Q99PP';
-      document.head.appendChild(script);
-    }, 1500); // 1.5-second delay keeps it completely out of the critical rendering path
-  });
-</script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-405K9Q99PP';
+        document.head.appendChild(script);
+      }, 1500);
+    });
+  </script>
 
   <script type="application/ld+json">
     {
@@ -66,9 +65,9 @@
         }
       ]
     }
-</script>
+  </script>
 
-  <!-- Schema.org MusicPlaylist Structured Data for Google & AI Search Indexing -->
+  <!-- Schema.org MusicPlaylist Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -77,7 +76,7 @@
     "description": "Complete audio track collection and free MP3 downloads by Indian Idol Season 2 finalist Yashashree Bhave including Bollywood singles, classical ghazals, Marathi movie soundtracks, and sacred bhajans.",
     "numTracks": 32,
     "creator": {
-      "@type": "MusicArtist",
+      "@type": "MusicGroup",
       "name": "Yashashree Bhave",
       "alternateName": ["Yashi", "Yashashree Bhave Songs"],
       "url": "https://yashashreebhave.com/"
@@ -134,7 +133,6 @@
       color: #f8fafc;
       font-size: 1.05rem;
       font-weight: 600;
-      font-family: 'Plus Jakarta Sans', sans-serif;
     }
     .audio-dl-btn {
       width: 48px;
@@ -180,45 +178,44 @@
       </button>
 
       <nav aria-label="Primary Navigation">
-      <ul class="nav-links" id="navLinks">
-               <li class="mobile-menu-header">
+        <ul class="nav-links" id="navLinks">
+          <li class="mobile-menu-header">
             <span class="menu-brand-title">Menu</span>
             <button type="button" class="nav-close-btn" id="navCloseBtn" aria-label="Close navigation menu">&times;</button>
           </li>
-        <li><a href="index.html">Home</a></li>
-        
-        <!-- About & Journey Dropdown (Non-Link Parent) -->
-        <li class="nav-item-dropdown" id="dropdownAbout">
-          <span class="dropdown-trigger" onclick="toggleMobileDropdown(this)">
-            About &amp; Journey <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
-          </span>
-          <ul class="dropdown-menu">
-            <li><a href="about-yashashree-bhave.html">About Yashashree Bhave</a></li>
-            <li><a href="indian-idol-2-journey.html">Indian Idol 2 Journey</a></li>
-            <li><a href="biography-musical-journey.html">Musical Biography</a></li>
-            <li><a href="awards-television-achievements.html">Awards &amp; Television</a></li>
-          </ul>
-        </li>
+          <li><a href="index.html">Home</a></li>
+          
+          <li class="nav-item-dropdown" id="dropdownAbout">
+            <span class="dropdown-trigger" onclick="toggleMobileDropdown(this)">
+              About &amp; Journey <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </span>
+            <ul class="dropdown-menu">
+              <li><a href="about-yashashree-bhave.html">About Yashashree Bhave</a></li>
+              <li><a href="indian-idol-2-journey.html">Indian Idol 2 Journey</a></li>
+              <li><a href="biography-musical-journey.html">Musical Biography</a></li>
+              <li><a href="awards-television-achievements.html">Awards &amp; Television</a></li>
+            </ul>
+          </li>
 
-        <li class="nav-item-dropdown" id="dropdownMedia">
-          <span class="dropdown-trigger" onclick="toggleMobileDropdown(this)">
-            Music &amp; Media <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
-          </span>
-          <ul class="dropdown-menu">
-            <li><a href="discography-videos.html">Discography &amp; Videos</a></li>
-            <li><a href="download-mp3-songs.html">Download MP3 Songs</a></li>
-            <li><a href="live-shows-concert-booking.html">Live Shows Gallery</a></li>
-            <li><a href="paper-media.html">Press &amp; Paper Media</a></li>
-            <li><a href="bollywood-legends.html">Bollywood Legends</a></li>
-          </ul>
-        </li>
+          <li class="nav-item-dropdown" id="dropdownMedia">
+            <span class="dropdown-trigger" onclick="toggleMobileDropdown(this)">
+              Music &amp; Media <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </span>
+            <ul class="dropdown-menu">
+              <li><a href="discography-videos.html">Discography &amp; Videos</a></li>
+              <li><a href="download-mp3-songs.html" class="active">Download MP3 Songs</a></li>
+              <li><a href="live-shows-concert-booking.html">Live Shows Gallery</a></li>
+              <li><a href="paper-media.html">Press &amp; Paper Media</a></li>
+              <li><a href="bollywood-legends.html">Bollywood Legends</a></li>
+            </ul>
+          </li>
 
-        <li><a href="photos.html">Photo Gallery</a></li>
-        <li><a href="singing-classes.html">Singing Classes</a></li>
-        <li><a href="testimonial.html">Reviews</a></li>
-        <li><a href="contact-us.html">Contact</a></li>
-      </ul>
-    </nav>
+          <li><a href="photos.html">Photo Gallery</a></li>
+          <li><a href="singing-classes.html">Singing Classes</a></li>
+          <li><a href="testimonial.html">Reviews</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -255,66 +252,66 @@
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Kudi Mai Kaamal Di (Zee Music Company).mp3', 'Kudi Mai Kaamal Di (Zee Music Company)')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('16OuaGCFo8caZdCv__qJMCmb82SShqgku', 'Kudi Mai Kaamal Di (Zee Music Company)')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
             <span class="audio-title-text">Kudi Mai Kaamal Di (Zee Music Company) (mp3)</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Kudi Mai Kaamal Di (Zee Music Company).mp3', 'Kudi-Mai-Kaamal-Di.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=16OuaGCFo8caZdCv__qJMCmb82SShqgku', 'Kudi-Mai-Kaamal-Di.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Mai Toh Ho Gai Re Sajna Teri (Zee Music Company).mp3', 'Mai Toh Ho Gai Re Sajna Teri (Zee Music Company)')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1LukShnMab2fWKOrkZCK7mJf0pF4nEIHm', 'Mai Toh Ho Gai Re Sajna Teri (Zee Music Company)')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
             <span class="audio-title-text">Mai Toh Ho Gai Re Sajna Teri (Zee Music Company) (mp3)</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Mai Toh Ho Gai Re Sajna Teri (Zee Music Company).mp3', 'Mai-Toh-Ho-Gai-Re-Sajna-Teri.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1LukShnMab2fWKOrkZCK7mJf0pF4nEIHm', 'Mai-Toh-Ho-Gai-Re-Sajna-Teri.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Woh Pehli Baar (Indian Idol 2 ).mp3', 'Woh Pehli Baar (Indian Idol 2)')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1pvd09yjiZLXvCdd8MsMZieFgqj-g2g_u', 'Woh Pehli Baar (Indian Idol 2)')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
             <span class="audio-title-text">Woh Pehli Baar (Indian Idol 2) (mp3)</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Woh Pehli Baar (Indian Idol 2 ).mp3', 'Woh-Pehli-Baar.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1pvd09yjiZLXvCdd8MsMZieFgqj-g2g_u', 'Woh-Pehli-Baar.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Pyara Vich Payal by Yashi Tracks.mp3', 'Pyara Vich Payal by Yashi Tracks')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1WcNGmCnvFbdV2ZrM3AYU5BUWWRrlxMda', 'Pyara Vich Payal by Yashi Tracks')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
             <span class="audio-title-text">Pyara Vich Payal by Yashi Tracks (mp3)</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Pyara Vich Payal by Yashi Tracks.mp3', 'Pyara-Vich-Payal.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1WcNGmCnvFbdV2ZrM3AYU5BUWWRrlxMda', 'Pyara-Vich-Payal.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/TUM WO BARISH.mp3', 'TUM WO BARISH')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1d7mPN7345JalTvW5KCpoxNSxeBOixmpa', 'TUM WO BARISH')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
             <span class="audio-title-text">TUM WO BARISH (mp3)</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/TUM WO BARISH.mp3', 'TUM-WO-BARISH.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1d7mPN7345JalTvW5KCpoxNSxeBOixmpa', 'TUM-WO-BARISH.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Ae Dil E Nadan (Sony Entertainment Television).mp3', 'Ae Dil E Nadan')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Ae Dil E Nadan (Sony BMG) (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1PS1xwItsSWYbbuu4XDFqpQ3IxUow7L2q', 'Ae Dil E Nadan (Sony Entertainment Television)')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Ae Dil E Nadan (Sony Entertainment Television) (mp3)</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Ae Dil E Nadan (Sony Entertainment Television).mp3', 'Ae-Dil-E-Nadan.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1PS1xwItsSWYbbuu4XDFqpQ3IxUow7L2q', 'Ae-Dil-E-Nadan.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Roopachi Roopwanti - Marathi Movie.mp3', 'Roopachi Roopwanti')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Roopachi Roopwanti (Marathi Movie Playback) (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1ekLCTcRCwrovtuF19JNADFtCTS4Vo8y7', 'Roopachi Roopwanti - Marathi Movie')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Roopachi Roopwanti - Marathi Movie (mp3)</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Roopachi Roopwanti - Marathi Movie.mp3', 'Roopachi-Roopwanti.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1ekLCTcRCwrovtuF19JNADFtCTS4Vo8y7', 'Roopachi-Roopwanti.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Ye Sawakara - Marathi Movie.mp3', 'Ye Sawakara')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Ye Sawakara (Marathi Movie Playback) (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1QrSbG8CKgeCTTNoFX6zFw9BJUoa61Lpn', 'Ye Sawakara - Marathi Movie')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Ye Sawakara - Marathi Movie (mp3)</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Ye Sawakara - Marathi Movie.mp3', 'Ye-Sawakara.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1QrSbG8CKgeCTTNoFX6zFw9BJUoa61Lpn', 'Ye-Sawakara.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
       </section>
 
@@ -327,34 +324,34 @@
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/ads/Koi Ye Kaise Bataaye.mp3', 'Koi Ye Kaise Bataaye')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Koi Ye Kaise Bataaye (Ghazal Special) (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1mZTWN-7S2_fjmWm64T7p0nWJoBdNLMMu', 'Koi Ye Kaise Bataaye - Ghazal Special')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Ghazal Special (Koi Ye Kaise Bataaye) - Yashashree Bhave (mp3)</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/ads/Koi Ye Kaise Bataaye.mp3', 'Koi-Ye-Kaise-Bataaye.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1mZTWN-7S2_fjmWm64T7p0nWJoBdNLMMu', 'Koi-Ye-Kaise-Bataaye.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/old songs/Bolchi Tomar.mp3', 'Bolchi Tomar')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Bolchi Tomar (Bengali Special Single) (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1U6zgEKBCgZsCmKX0rHbzTGtoNkoWTTID', 'Bolchi Tomar - Bengali Special Song')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Bengali Special Song (Bolchi Tomar) - Yashashree Bhave (mp3)</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/old songs/Bolchi Tomar.mp3', 'Bolchi-Tomar.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1U6zgEKBCgZsCmKX0rHbzTGtoNkoWTTID', 'Bolchi-Tomar-Bengali.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/ads/92.7 Big FM interview Yashashree Bhave.mp3', '92.7 Big FM Radio Interview Feature')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">92.7 Big FM Radio Interview Feature (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1WyUFw0nSBP6pU71PyNHI10PUbCeq0LE3', '92.7 Big FM interview Yashashree Bhave')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">92.7 Big FM Interview - Yashashree Bhave (mp3)</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/ads/92.7 Big FM interview Yashashree Bhave.mp3', 'Big-FM-Interview.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1WyUFw0nSBP6pU71PyNHI10PUbCeq0LE3', 'Big-FM-Interview.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/ads/Dainik Bhaskar Ad.mp3', 'Dainik Bhaskar Commercial Jingle')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Dainik Bhaskar Commercial Jingle (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1kmZqIQVn-sZhhBHrGNpZEHm897re1mm2', 'Dainik Bhaskar Ad - Commercial Jingles')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Commercial Jingles (Dainik Bhaskar Ad) - Yashashree Bhave (mp3)</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/ads/Dainik Bhaskar Ad.mp3', 'Dainik-Bhaskar-Jingle.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1kmZqIQVn-sZhhBHrGNpZEHm897re1mm2', 'Dainik-Bhaskar-Ad.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
       </section>
 
@@ -367,106 +364,114 @@
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/old songs/Zara zara behkta hai.mp3', 'Zara Zara Behkta Hai')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Zara Zara Behkta Hai (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1gzHpBx3FscvpA7T9uQlrUCI_mdOqU4Lb', 'Zara zara behkta hai')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Zara zara behkta hai.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/old-songs/Zara-zara-behkta-hai.mp3', 'Zara-Zara-Behkta-Hai.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1gzHpBx3FscvpA7T9uQlrUCI_mdOqU4Lb', 'Zara-zara-behkta-hai.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/old songs/Ye ishq hai.mp3', 'Yeh Ishq Hai')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Yeh Ishq Hai (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1lAVwALqJf9dMjhkYSf2X4j7ClVIjXlBg', 'Ye ishq hai')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Ye ishq hai.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/old songs/Ye ishq hai.mp3', 'Yeh-Ishq-Hai.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1lAVwALqJf9dMjhkYSf2X4j7ClVIjXlBg', 'Ye-ishq-hai.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/old songs/Tum Hum safar ho - Love song.mp3', 'Tum Humsafar Ho')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Tum Humsafar Ho (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('12UKQoSFbFWZF5n5GNARbkV6Y5m2IyfzI', 'Tum Hum safar ho - Love song')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Tum Hum safar ho - Love song.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/old songs/Tum Hum safar ho - Love song.mp3', 'Tum-Humsafar-Ho.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=12UKQoSFbFWZF5n5GNARbkV6Y5m2IyfzI', 'Tum-Hum-safar-ho.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/old songs/Tere bina jiya jaena.mp3', 'Tere Bina Jiya Jaaye Na')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Tere Bina Jiya Jaaye Na (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1t8n8wlKuZT9AXJFw-gXwl8YCXCkuXwBS', 'Tere bina jiya jaena')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Tere bina jiya jaena.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/old songs/Tere bina jiya jaena.mp3', 'Tere-Bina-Jiya-Jaaye-Na.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1t8n8wlKuZT9AXJFw-gXwl8YCXCkuXwBS', 'Tere-bina-jiya-jaena.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/old songs/Piya beena piya beena.mp3', 'Piya Bina Piya Bina')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Piya Bina Piya Bina (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1729GTjUhLQWP74TvOELtR0zdW7ecw1RW', 'Piya beena piya beena')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Piya beena piya beena.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/old songs/Piya beena piya beena.mp3', 'Piya-Bina-Piya-Bina.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1729GTjUhLQWP74TvOELtR0zdW7ecw1RW', 'Piya-beena-piya-beena.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/old songs/Mera kuch saaman.mp3', 'Mera Kuch Saamaan')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Mera Kuch Saamaan (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1w4oXKdh8lZr6Fbw_oq7f0EykQWl2vG1Z', 'Mera kuch saaman')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Mera kuch saaman.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/old songs/Mera kuch saaman.mp3', 'Mera-Kuch-Saamaan.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1w4oXKdh8lZr6Fbw_oq7f0EykQWl2vG1Z', 'Mera-kuch-saaman.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/old songs/Megha chhaye aadhi raat.mp3', 'Megha Chhaye Aadhi Raat')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Megha Chhaye Aadhi Raat (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1u7ifQJQAruWxSpv226jrnJSm7BPD33UB', 'Megha chhaye aadhi raat')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Megha chhaye aadhi raat.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/old songs/Megha chhaye aadhi raat.mp3', 'Megha-Chhaye-Aadhi-Raat.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1u7ifQJQAruWxSpv226jrnJSm7BPD33UB', 'Megha-chhaye-aadhi-raat.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/old songs/Kehna hi kya.mp3', 'Kehna Hi Kya')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Kehna Hi Kya (Bombay) (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1ouMu8XU-HtJFRT3XXhEjoO6PPKaaj0A_', 'Kehna hi kya')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Kehna hi kya.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/old songs/Kehna hi kya.mp3', 'Kehna-Hi-Kya.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1ouMu8XU-HtJFRT3XXhEjoO6PPKaaj0A_', 'Kehna-hi-kya.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/old songs/Kaisi paheli hai.mp3', 'Kaisi Paheli Zindagani')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Kaisi Paheli Zindagani (Parineeta) (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1urk8XurniloPFbPi4sgllXam_TLM43uI', 'Kaisi paheli hai')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Kaisi paheli hai.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/old songs/Kaisi paheli hai.mp3', 'Kaisi-Paheli-Zindagani.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1urk8XurniloPFbPi4sgllXam_TLM43uI', 'Kaisi-paheli-hai.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/old songs/Hum pyar me jalnewalo ko.mp3', 'Hum Pyaar Mein Jalne Waalon Ko')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Hum Pyaar Mein Jalne Waalon Ko (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1XrwtCMDSXbwFDDLHeujDif94blCOgrGH', 'Hum pyar me jalnewalo ko')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Hum pyar me jalnewalo ko.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/old songs/Hum pyar me jalnewalo ko.mp3', 'Hum-Pyaar-Mein-Jalne-Waalon.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1XrwtCMDSXbwFDDLHeujDif94blCOgrGH', 'Hum-pyar-me-jalnewalo-ko.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/old songs/Do lafzo ki hai.mp3', 'Do Lafzon Ki Hai')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Do Lafzon Ki Hai Dil Ki Kahani (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1baNWq_mvoCXj6Sk2IVuBTzFoYYGxaZCC', 'Do lafzo ki hai')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Do lafzo ki hai.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/old songs/Do lafzo ki hai.mp3', 'Do-Lafzon-Ki-Hai.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1baNWq_mvoCXj6Sk2IVuBTzFoYYGxaZCC', 'Do-lafzo-ki-hai.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/old songs/Dil hoom hoom kare.mp3', 'Dil Hoom Hoom Kare')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Dil Hoom Hoom Kare (Rudaali) (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1H9rEuSmbZoSUHAG-Gt_EYQ63vmquIAPA', 'Dil hoom hoom kare')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Dil hoom hoom kare.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/old songs/Dil hoom hoom kare.mp3', 'Dil-Hoom-Hoom-Kare.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1H9rEuSmbZoSUHAG-Gt_EYQ63vmquIAPA', 'Dil-hoom-hoom-kare.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/old songs/Ajeeb dastan hai ye.mp3', 'Ajeeb Dastaan Hai Yeh')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Ajeeb Dastaan Hai Yeh (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('15zudbxS3qbyZUS2fzjp2UApKno5XdoxF', 'Bolchi Tomar')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Bolchi Tomar.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/old songs/Ajeeb dastan hai ye.mp3', 'Ajeeb-Dastaan-Hai-Yeh.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=15zudbxS3qbyZUS2fzjp2UApKno5XdoxF', 'Bolchi-Tomar.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+        </div>
+
+        <div class="audio-card-row">
+          <div class="audio-track-info">
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1B7VSM4iGdh1MwHCfAmWJZGhLlmwvwyf7', 'Ajeeb dastan hai ye')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Ajeeb dastan hai ye.mp3</span>
+          </div>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1B7VSM4iGdh1MwHCfAmWJZGhLlmwvwyf7', 'Ajeeb-dastan-hai-ye.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
       </section>
 
@@ -479,178 +484,178 @@
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Divotional songs/Pyara saja darbar.mp3', 'Pyara Saja Darbar')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Pyara Saja Darbar (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1sqTTOdRp9DhOdFrCMwXCWHzSr_zTuSfU', 'Pyara saja darbar')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Pyara saja darbar.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Divotional songs/Pyara saja darbar.mp3', 'Pyara-Saja-Darbar.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1sqTTOdRp9DhOdFrCMwXCWHzSr_zTuSfU', 'Pyara-saja-darbar.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Divotional songs/Mor bole.mp3', 'Mor Bole')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Mor Bole (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1l4zsm8ZOQGE5NDhw8WQVox9Q5OOH8rRz', 'Mor bole')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Mor bole.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Divotional songs/Mor bole.mp3', 'Mor-Bole.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1l4zsm8ZOQGE5NDhw8WQVox9Q5OOH8rRz', 'Mor-bole.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Divotional songs/MAI PARDESI HU.mp3', 'Mai Pardesi Hu')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Mai Pardesi Hu (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1eRPNQ_Mde7IGV7hHIyHjEAXQQVGhsiss', 'MAI PARDESI HU')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">MAI PARDESI HU.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Divotional songs/MAI PARDESI HU.mp3', 'Mai-Pardesi-Hu.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1eRPNQ_Mde7IGV7hHIyHjEAXQQVGhsiss', 'MAI-PARDESI-HU.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Divotional songs/Maa sherawali.mp3', 'Maa Sherawali')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Maa Sherawali (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1eKU3VQDD-jsJpnlzN-eG1IF-OliLVzQo', 'Maa sherawali')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Maa sherawali.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Divotional songs/Maa sherawali.mp3', 'Maa-Sherawali.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1eKU3VQDD-jsJpnlzN-eG1IF-OliLVzQo', 'Maa-sherawali.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Divotional songs/Maa sherawali ubar de.mp3', 'Maa Sherawali Ubaar De')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Maa Sherawali Ubaar De (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1tgA4fQ8M-TXJptCl3TASzIFK53OM4pOY', 'Maa sherawali ubar de')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Maa sherawali ubar de.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Divotional songs/Maa sherawali ubar de.mp3', 'Maa-Sherawali-Ubaar-De.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1tgA4fQ8M-TXJptCl3TASzIFK53OM4pOY', 'Maa-sherawali-ubar-de.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Divotional songs/Jaikali by yashashree bhave.mp3', 'Jaikali')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Jaikali by Yashashree Bhave (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('138ORrLNfvGzlPXN3QTdbeAGJroUsa-gj', 'Jaikali by yashashree bhave')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Jaikali by yashashree bhave.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Divotional songs/Jaikali by yashashree bhave.mp3', 'Jaikali.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=138ORrLNfvGzlPXN3QTdbeAGJroUsa-gj', 'Jaikali.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Divotional songs/Jai mata di bol.mp3', 'Jai Mata Di Bol')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Jai Mata Di Bol (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1ljBgwLRb1NLAmKvYBW1IFrlReBioCeXR', 'Jai mata di bol')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Jai mata di bol.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Divotional songs/Jai mata di bol.mp3', 'Jai-Mata-Di-Bol.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1ljBgwLRb1NLAmKvYBW1IFrlReBioCeXR', 'Jai-mata-di-bol.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Divotional songs/Hamko bhi dware.mp3', 'Humko Bhi Dware')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Humko Bhi Dware Bula Le (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1_GkFjS-46LkIcqfPKr20a9zSMgfcWftE', 'Hamko bhi dware')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Hamko bhi dware.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Divotional songs/Hamko bhi dware.mp3', 'Humko-Bhi-Dware.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1_GkFjS-46LkIcqfPKr20a9zSMgfcWftE', 'Hamko-bhi-dware.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Divotional songs/BARISHOKI CHHAM CHHAM ME.mp3', 'Barishon Ki Chham Chham Mein')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Barishon Ki Chham Chham Mein (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1NoWuj025FWw-ZG-Fgzcd6Eo8aiO8kQZD', 'BARISHOKI CHHAM CHHAM ME')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">BARISHOKI CHHAM CHHAM ME.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Divotional songs/BARISHOKI CHHAM CHHAM ME.mp3', 'Barishon-Ki-Chham.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1NoWuj025FWw-ZG-Fgzcd6Eo8aiO8kQZD', 'BARISHOKI-CHHAM-CHHAM-ME.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Paramparik Bhajan/Unche Unche Parvat Rehti.mp3', 'Unche Unche Parvat Rehti')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Unche Unche Parvat Rehti (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1lG4PiecBXbjubSKN0ejBbImKT3PyOFVh', 'Unche Unche Parvat Rehti')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Unche Unche Parvat Rehti.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Paramparik Bhajan/Unche Unche Parvat Rehti.mp3', 'Unche-Unche-Parvat.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1lG4PiecBXbjubSKN0ejBbImKT3PyOFVh', 'Unche-Unche-Parvat-Rehti.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Paramparik Bhajan/Parva Sampavuni Ghetli Samadhi.mp3', 'Parva Sampavuni Ghetli Samadhi')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Parva Sampavuni Ghetli Samadhi (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1taeqqnAQ1yjrWluZSfJbAOrtQdX96jD_', 'Parva Sampavuni Ghetli Samadhi')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Parva Sampavuni Ghetli Samadhi.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Paramparik Bhajan/Parva Sampavuni Ghetli Samadhi.mp3', 'Parva-Sampavuni.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1taeqqnAQ1yjrWluZSfJbAOrtQdX96jD_', 'Parva-Sampavuni-Ghetli-Samadhi.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Paramparik Bhajan/Om Jai Jagdish Hare.mp3', 'Om Jai Jagdish Hare')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Om Jai Jagdish Hare (Aarti) (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1PgupYI3t1nrHah2Vno6QcyMZ4x9BwZX1', 'Om Jai Jagdish Hare')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Om Jai Jagdish Hare.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Paramparik Bhajan/Om Jai Jagdish Hare.mp3', 'Om-Jai-Jagdish.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1PgupYI3t1nrHah2Vno6QcyMZ4x9BwZX1', 'Om-Jai-Jagdish-Hare.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Paramparik Bhajan/Navratri Main Is Baar.mp3', 'Navratri Main Is Baar')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Navratri Main Is Baar (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1EgxRxxeHROcbNErcd-w7lC2VJAkGvnnK', 'Navratri Main Is Baar')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Navratri Main Is Baar.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Paramparik Bhajan/Navratri Main Is Baar.mp3', 'Navratri-Main.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1EgxRxxeHROcbNErcd-w7lC2VJAkGvnnK', 'Navratri-Main-Is-Baar.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Paramparik Bhajan/Mahalaxmi Ashtakam.mp3', 'Mahalaxmi Ashtakam')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Mahalaxmi Ashtakam (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1ctSmcNTQ6zNz9QRxeFIKRciRBhDJUdV0', 'Mahalaxmi Ashtakam')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Mahalaxmi Ashtakam.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Paramparik Bhajan/Mahalaxmi Ashtakam.mp3', 'Mahalaxmi-Ashtakam.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1ctSmcNTQ6zNz9QRxeFIKRciRBhDJUdV0', 'Mahalaxmi-Ashtakam.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Paramparik Bhajan/Lamxi Mata.mp3', 'Laxmi Mata Aarti')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Laxmi Mata Aarti (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1HDJ3mApnL1FNzzb4dOIfJ3adKOYy2UwF', 'Lamxi Mata')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Lamxi Mata.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Paramparik Bhajan/Lamxi Mata.mp3', 'Laxmi-Mata-Aarti.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1HDJ3mApnL1FNzzb4dOIfJ3adKOYy2UwF', 'Lamxi-Mata.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Paramparik Bhajan/Jai-Ganesh-Deva-Ganesh-Aarti.mp3', 'Jai Ganesh Deva')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Jai Ganesh Deva (Ganesh Aarti) (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1mE6Ndc1pNaYFqhfJmBnOBH6KYThbCyC1', 'Jai-Ganesh-Deva-Ganesh-Aarti')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Jai-Ganesh-Deva-Ganesh-Aarti.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Paramparik Bhajan/Jai-Ganesh-Deva-Ganesh-Aarti.mp3', 'Jai-Ganesh-Deva.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1mE6Ndc1pNaYFqhfJmBnOBH6KYThbCyC1', 'Jai-Ganesh-Deva-Ganesh-Aarti.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Paramparik Bhajan/Jai Ambe Gauri.mp3', 'Jai Ambe Gauri')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Jai Ambe Gauri (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1nBV7-DvrFQAQIqtK30L-ET-Jbw63W3pr', 'Jai Ambe Gauri')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Jai Ambe Gauri.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Paramparik Bhajan/Jai Ambe Gauri.mp3', 'Jai-Ambe-Gauri.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1nBV7-DvrFQAQIqtK30L-ET-Jbw63W3pr', 'Jai-Ambe-Gauri.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Paramparik Bhajan/Durge Durgat Bhari.mp3', 'Durge Durgat Bhari')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Durge Durgat Bhari (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1_RMpVGtibxAJOT4H1cKshQf0wFqcvDvg', 'Durge Durgat Bhari')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Durge Durgat Bhari.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Paramparik Bhajan/Durge Durgat Bhari.mp3', 'Durge-Durgat.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1_RMpVGtibxAJOT4H1cKshQf0wFqcvDvg', 'Durge-Durgat-Bhari.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Paramparik Bhajan/Charo Dham Ka Phal Paya Hain.mp3', 'Charo Dham Ka Phal Paya Hain')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Charo Dham Ka Phal Paya Hain (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1RX_9JDitihOkU8IWqn3GG2-uI1HQvc2I', 'Charo Dham Ka Phal Paya Hain')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Charo Dham Ka Phal Paya Hain.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Paramparik Bhajan/Charo Dham Ka Phal Paya Hain.mp3', 'Charo-Dham.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1RX_9JDitihOkU8IWqn3GG2-uI1HQvc2I', 'Charo-Dham-Ka-Phal-Paya-Hain.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Paramparik Bhajan/Ambe Tu Hain Jagdambe.mp3', 'Ambe Tu Hain Jagdambe')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Ambe Tu Hain Jagdambe (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1SYw0L6T_wqgxXw-9jbrvr2xq1Ur39I2H', 'Ambe Tu Hain Jagdambe')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Ambe Tu Hain Jagdambe.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Paramparik Bhajan/Ambe Tu Hain Jagdambe.mp3', 'Ambe-Tu-Hain.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1SYw0L6T_wqgxXw-9jbrvr2xq1Ur39I2H', 'Ambe-Tu-Hain-Jagdambe.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Paramparik Bhajan/Aishi_gajananachi_shakti.mp3', 'Aishi Gajananachi Shakti')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Aishi Gajananachi Shakti (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1bp9SUbW5FSLGO-pq82Y1WJ_XQBjyg5Iq', 'Aishi gajananachi shakti')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Aishi_gajananachi_shakti.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Paramparik Bhajan/Aishi_gajananachi_shakti.mp3', 'Aishi-Gajananachi.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1bp9SUbW5FSLGO-pq82Y1WJ_XQBjyg5Iq', 'Aishi-gajananachi-shakti.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Paramparik Bhajan/Aarti-Kunj-Bihari-Ki.mp3', 'Aarti Kunj Bihari Ki')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Aarti Kunj Bihari Ki (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1mt-Tvmq7f7UCJDpwxQESGLRz732Z8mGY', 'Aarti Kunj Bihari Ki')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Aarti-Kunj-Bihari-Ki.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Paramparik Bhajan/Aarti-Kunj-Bihari-Ki.mp3', 'Aarti-Kunj.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1mt-Tvmq7f7UCJDpwxQESGLRz732Z8mGY', 'Aarti-Kunj-Bihari-Ki.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
       </section>
 
@@ -663,26 +668,26 @@
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Christen/O Maa O Maa.mp3', 'O Maa O Maa')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">O Maa O Maa (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1GMIuF7dJg9UMmotPz555JIO95V8pa3xy', 'O Maa O Maa')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">O Maa O Maa.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Christen/O Maa O Maa.mp3', 'O-Maa-O-Maa.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1GMIuF7dJg9UMmotPz555JIO95V8pa3xy', 'O-Maa-O-Maa.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Christen/Man Mandir Mein Basne Aao.mp3', 'Man Mandir Mein Basne Aao')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Man Mandir Mein Basne Aao (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1UnDHL1Z_IMdnTLSR4BZtqg9Mi7O-Fa17', 'Man Mandir Mein Basne Aao')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Man Mandir Mein Basne Aao.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Christen/Man Mandir Mein Basne Aao.mp3', 'Man-Mandir.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1UnDHL1Z_IMdnTLSR4BZtqg9Mi7O-Fa17', 'Man-Mandir-Mein-Basne-Aao.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
 
         <div class="audio-card-row">
           <div class="audio-track-info">
-            <button type="button" class="audio-play-btn" onclick="openPlayerModal('audio/Christen/Aao Re Aao Darshan Pane.mp3', 'Aao Re Aao Darshan Pane')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
-            <span class="audio-title-text">Aao Re Aao Darshan Pane (mp3)</span>
+            <button type="button" class="audio-play-btn" onclick="openPlayerModal('1mkZ7tCMYTwWzW6kg3JBe_l8D8Gn7yxNh', 'Aao Re Aao Darshan Pane')" title="Play Preview"><i class="fa-solid fa-play"></i></button>
+            <span class="audio-title-text">Aao Re Aao Darshan Pane.mp3</span>
           </div>
-          <button type="button" class="audio-dl-btn" onclick="forceDownload('audio/Christen/Aao Re Aao Darshan Pane.mp3', 'Aao-Re-Aao.mp3')" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
+          <button type="button" class="audio-dl-btn" onclick="downloadMp3('https://drive.google.com/uc?export=download&id=1mkZ7tCMYTwWzW6kg3JBe_l8D8Gn7yxNh', 'Aao-Re-Aao-Darshan-Pane.mp3', this)" title="Download MP3"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
       </section>
 
@@ -695,18 +700,14 @@
     </div>
   </main>
 
-  <!-- Native HTML5 Audio Player Modal -->
+  <!-- Audio Lightbox Modal (Using Google Drive Preview Iframe like your working old code) -->
   <div class="player-modal" id="playerModal" onclick="closePlayerModal(event)">
     <div class="modal-content">
       <div class="modal-header">
         <span class="modal-title" id="modalSongTitle">Now Playing</span>
         <button type="button" class="modal-close" onclick="forceCloseModal()">&times;</button>
       </div>
-      <div style="padding: 10px; text-align: center;">
-        <audio id="nativeAudioPlayer" controls style="width: 100%;" autoplay>
-          Your browser does not support the audio element.
-        </audio>
-      </div>
+      <iframe id="audioPreviewIframe" class="player-iframe" src="" allow="autoplay"></iframe>
     </div>
   </div>
 
@@ -749,53 +750,43 @@
     </div>
   </footer>
 
-  <!-- Script for Native Audio Player Modal & Direct File Download via Blob -->
+  <!-- Working Player Modal & Download Scripts -->
   <script>
-    function openPlayerModal(audioSrc, songTitle) {
-      const modal = document.getElementById('playerModal');
-      const audio = document.getElementById('nativeAudioPlayer');
-      const titleSpan = document.getElementById('modalSongTitle');
-
-      titleSpan.innerText = songTitle;
-      audio.src = audioSrc;
-      audio.load();
-      audio.play().catch(e => console.log("Playback prevented:", e));
-      modal.classList.add('active');
+    function openPlayerModal(driveId, title) {
+      document.getElementById('modalSongTitle').innerText = title;
+      document.getElementById('audioPreviewIframe').src = 'https://drive.google.com/file/d/' + driveId + '/preview';
+      document.getElementById('playerModal').classList.add('active');
     }
 
-    function closePlayerModal(event) {
-      if (event.target.id === 'playerModal') {
+    function forceCloseModal() {
+      document.getElementById('audioPreviewIframe').src = '';
+      document.getElementById('playerModal').classList.remove('active');
+    }
+
+    function closePlayerModal(e) {
+      if (e.target.id === 'playerModal') {
         forceCloseModal();
       }
     }
 
-    function forceCloseModal() {
-      const modal = document.getElementById('playerModal');
-      const audio = document.getElementById('nativeAudioPlayer');
-      audio.pause();
-      audio.src = '';
-      modal.classList.remove('active');
-    }
+    // 1-Tap Direct File Download
+    function downloadMp3(url, fileName, btn) {
+      const original = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+      btn.style.pointerEvents = 'none';
 
-    // Forces a true browser download instead of streaming in a new tab
-    function forceDownload(fileUrl, fileName) {
-      fetch(fileUrl)
-        .then(response => response.blob())
-        .then(blob => {
-          const url = window.URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.style.display = 'none';
-          a.href = url;
-          a.download = fileName;
-          document.body.appendChild(a);
-          a.click();
-          window.URL.revokeObjectURL(url);
-          document.body.removeChild(a);
-        })
-        .catch(() => {
-          // Fallback if local fetch fails due to CORS in direct file testing
-          window.open(fileUrl, '_blank');
-        });
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = fileName;
+      a.target = '_blank';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+      setTimeout(() => {
+        btn.innerHTML = original;
+        btn.style.pointerEvents = 'auto';
+      }, 1500);
     }
   </script>
 
