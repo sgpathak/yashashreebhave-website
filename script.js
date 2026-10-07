@@ -179,34 +179,3 @@ function toggleMobileDropdown(element) {
     parentLi.classList.toggle('open');
   }
 }
-
-
-// Lightweight Unique Visitor Counter (v2 API)
-document.addEventListener("DOMContentLoaded", function() {
-  const counterElement = document.getElementById('visitorCount');
-  if (!counterElement) return; // Exit if not on the home page
-
-  const hasVisited = sessionStorage.getItem('yashashree_visited');
-  
-  // CounterAPI v2 endpoint structure
-  const apiUrl = hasVisited 
-    ? 'https://api.counterapi.dev/v2/yashashreebhave/visits' 
-    : 'https://api.counterapi.dev/v2/yashashreebhave/visits/up';
-
-  fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      // v2 returns the value directly in data.value
-      if (data && typeof data.value !== 'undefined') {
-        counterElement.innerText = data.value.toLocaleString();
-        if (!hasVisited) {
-          sessionStorage.setItem('yashashree_visited', 'true');
-        }
-      } else {
-        counterElement.innerText = '1';
-      }
-    })
-    .catch(() => {
-      counterElement.innerText = '1+';
-    });
-});
