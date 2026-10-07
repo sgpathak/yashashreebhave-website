@@ -29,14 +29,23 @@
   <meta name="twitter:description" content="Experience high-energy live entertainment and Bollywood classics with Yashashree Bhave.">
   <meta name="twitter:image" content="https://yashashreebhave.com/images/live-show-banner.jpg">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-405K9Q99PP');
-  </script>
+  <!-- Deferred Google tag (gtag.js) - Fixes Forced Reflow -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-405K9Q99PP');
+
+  // Lazy-load the external analytics script after the page fully loads
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-405K9Q99PP';
+      document.head.appendChild(script);
+    }, 1500); // 1.5-second delay keeps it completely out of the critical rendering path
+  });
+</script>
 
   <script type="application/ld+json">
 {
