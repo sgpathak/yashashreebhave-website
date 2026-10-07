@@ -1,0 +1,40 @@
+RewriteEngine On
+
+# 301 Redirects for Old 404 URLs
+RewriteRule ^awards/?$ /about-yashashree-bhave.html [R=301,L]
+RewriteRule ^biography/?$ /about-yashashree-bhave.html [R=301,L]
+RewriteRule ^blog/?$ / [R=301,L]
+RewriteRule ^book-artist/?$ /live-shows-concert-booking.html [R=301,L]
+RewriteRule ^indian-idol-2/?$ /indian-idol-2-journey.html [R=301,L]
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Default expiration: 1 month
+  ExpiresDefault "access plus 1 month"
+  
+  # Images
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  
+  # CSS, JavaScript, and Fonts
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Force Cache-Control headers for static assets as a fallback
+  <FilesMatch "\.(ico|pdf|jpg|jpeg|png|gif|webp|svg|css|js|woff2)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+</IfModule>
