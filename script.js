@@ -179,3 +179,27 @@ function toggleMobileDropdown(element) {
     parentLi.classList.toggle('open');
   }
 }
+
+
+// Check if this visitor has already been counted in this session
+  const hasVisited = sessionStorage.getItem('yashashree_visited');
+  
+  // Choose endpoint: 'up' increments the count, '' just fetches the current count without incrementing on refresh
+  const endpoint = hasVisited ? '' : '/up';
+
+  fetch('https://api.counterapi.dev/v1/yashashreebhave/visits' + endpoint)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.count) {
+        document.getElementById('visitorCount').innerText = data.count.toLocaleString();
+        // Mark session as counted so refreshing won't trigger another increment
+        if (!hasVisited) {
+          sessionStorage.setItem('yashashree_visited', 'true');
+        }
+      } else {
+        document.getElementById('visitorCount').innerText = '1';
+      }
+    })
+    .catch(() => {
+      document.getElementById('visitorCount').innerText = '1+';
+    });

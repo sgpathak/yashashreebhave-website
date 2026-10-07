@@ -1724,3 +1724,27 @@ font-size:.9rem
 .reduce_margin_bottom {
 margin-bottom:0
 }
+
+.visitor-counter-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 6px 16px;
+  border-radius: 50px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.visitor-counter-wrap i {
+  color: var(--accent-gold);
+}
+
+.visitor-count-number {
+  color: var(--accent-gold-bright);
+  font-weight: 700;
+  letter-spacing: .5px;
+}
