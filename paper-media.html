@@ -11,8 +11,6 @@
   <link rel="canonical" href="https://yashashreebhave.com/paper-media.html">
 
   <link rel="stylesheet" href="style.css">
- <!-- FontAwesome Asynchronous Loading -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">  <!-- Favicon Icon Integration -->
   <link rel="icon" type="image/png" href="images/logo.png">
 
   <!-- Open Graph / WhatsApp / Facebook Meta Tags -->
@@ -326,9 +324,9 @@
             for (let i = 1; i <= 108; i++) {
               let title = pressTitles[i - 1] || `Press Feature #${i}`;
               document.write(`
-                <div class="vault-card" onclick="openAwardLightbox('papermedia/${i}.jpg', '${title}')">
+                <div class="vault-card" onclick="openAwardLightbox('Papermedia/${i}.jpg', '${title}')">
                   <div class="vault-img-box">
-                    <img src="papermedia/${i}.jpg" alt="Newspaper Clipping ${i} - Yashashree Bhave" loading="lazy">
+                    <img src="Papermedia/${i}.jpg" alt="Newspaper Clipping ${i} - Yashashree Bhave" loading="lazy">
                   </div>
                   <div class="vault-caption">
                     <p>${title}</p>
